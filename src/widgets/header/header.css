@@ -1,0 +1,28 @@
+.header__nav{
+    display: flex;
+    flex-direction: row;
+    gap: 6rem;
+    justify-content: space-between; 
+  padding: 1.4375rem 1rem;; 
+}
+.header__img-logo{
+    width: 126px;
+}
+.header__img-logo:hover{
+  cursor: pointer;
+}
+.header__left{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.header__menu{
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+.header__icon{
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}

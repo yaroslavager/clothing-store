@@ -1,0 +1,31 @@
+.announcement-bar{
+    width: 100%;
+    height: 2.375rem;
+    background-color: var( --color-text-primary);
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+}
+.announcement-bar__container{
+     max-width: 77.5rem;
+     width: 100%;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.announcement-bar__text{
+    color: var( --color-text-highlight);
+    font-size: var(  --fs-xxs);
+    font-family: var(  --font-secondary);
+}
+.announcement-bar__link{
+    font-size: var(--fs--base);
+    font-weight: bold;
+    cursor: pointer;
+}
+.announcement-bar__icon{
+    width: 0.8125rem;
+    cursor: pointer;
+}
