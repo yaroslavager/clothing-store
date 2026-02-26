@@ -10,7 +10,7 @@ I am building my first e-commerce clothing store to practically understand how m
 
 ### Tech Stack:
 * **Framework:** React (via Vite)
-* **Language:** TypeScript
+* **Language:** JavaScript, TypeScript
 * **Styles:** CSS (currently deciding on the methodology)
 
 ---
