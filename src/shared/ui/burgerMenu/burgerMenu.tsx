@@ -8,31 +8,48 @@ function BurgerMenu() {
     setVisibility(!visibility);
   };
 
+  const [subMenuOpen, setSubMenu] = useState(false);
+  const fSubMenu = () => {
+    setSubMenu(!subMenuOpen);
+  };
+
   return (
     <div className="burgerMenu__wrapper">
-        <img className="burgerManu__icon" src="/button.svg" alt="burger menu" onClick={fVisibility} />
-        {visibility &&(
-    <div className="burgerMenu__list">
-      <ul>
-        {navLinks.map((link, index) =>
-          link.children ? (
-            <div>
-              {link.children.map((sex, subIndex)=> 
-            <li key={subIndex}><a href={sex.link}>{sex.title}</a></li>
+      <img
+        className="burgerMеnu__icon"
+        src="/button.svg"
+        alt="burger menu"
+        onClick={fVisibility}
+      />
+      {visibility && (
+        <div className="burgerMenu__list-wrapper">
+          <ul className="burgerMenu__list">
+            {navLinks.map((link, index) =>
+              link.children ? (
+                <div>
+                  <li className="burgerMenu__item" key={index} onClick={fSubMenu}>
+                    {link.title} <img src="/shopopen.svg" alt="open sub menu" />
+                  </li>
+                  {subMenuOpen && (
+                    <div className="burgerMenu__subMenu">
+                      <ul className="burgerMenu__list">
+                        {link.children.map((people, inx) => {
+                          return <li  className="burgerMenu__item" key={inx}><a href="#">{people.title}</a></li>;
+                        })}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <li className="burgerMenu__item" key={index}>
+                  <a href={link.link}>{link.title}</a>
+                </li>
+              ),
             )}
-            </div>
-          ) : (
-            <li key={index}>
-              <a href={link.link}>{link.title}</a>
-            </li>
-          ),
-        )}
-      </ul>
+          </ul>
+        </div>
+      )}
     </div>
-)}
-</div>
-
-
   );
 }
-export default BurgerMenu
+export default BurgerMenu;

@@ -1,0 +1,28 @@
+.burgerMеnu__icon{
+    cursor: pointer;
+}
+.burgerMenu__list-wrapper{
+    position: absolute;
+    left: 0;
+    width: 100% ;
+    background-color: var(--color-text-highlight);
+  color: var(  --color-text-primary);
+}
+.burgerMenu__list {
+    list-style: none;
+    font-size: var(--fs-m);
+     padding-bottom: var( --fs-xxs) ;
+ width: fit-content;
+   
+}
+.burgerMenu__item{
+     padding-bottom: var( --fs-xxs) ;
+        cursor: pointer;
+
+}
+
+@media(min-width: 768px){
+.burgerMenu__wrapper{
+    display: none;
+} 
+}
