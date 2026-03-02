@@ -1,0 +1,26 @@
+.burgerMenu {
+  &__icon {
+    cursor: pointer;
+  }
+  &__list-wrapper {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-text-highlight);
+    color: var(--color-text-primary);
+    margin: 1.5rem 3.5rem;
+  }
+  &__list {
+    list-style: none;
+    font-size: var(--fs-m);
+    padding-bottom: var(--fs-xxs);
+    width: fit-content;
+  }
+  &__item {
+    padding-bottom: var(--fs-xxs);
+  }
+// Media queries BurgerMenu
+  @media (min-width: 768px) {
+    display: none;
+  }
+}

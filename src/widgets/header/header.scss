@@ -1,29 +1,32 @@
-.header__nav{
+.header{
+
+&__nav{
     display: flex;
     flex-direction: row;
     gap: 6rem;
     justify-content: space-between; 
   padding: 1.4375rem 1rem;; 
 }
-.header__img-logo{
+&__img-logo{
     width: 126px;
 }
-.header__img-logo:hover{
+&__img-logo:hover{
   cursor: pointer;
 }
-.header__left{
+&__left{
   display: flex;
   flex-direction: row;
   gap: 1rem;
   align-items: center;
 }
-.header__menu{
+&__menu{
   display: flex;
   flex-direction: row;
   gap: 12px;
 }
-.header__icon{
+&__icon{
   width: 24px;
   height: 24px;
   cursor: pointer;
+}
 }

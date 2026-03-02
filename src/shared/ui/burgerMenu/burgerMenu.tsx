@@ -1,4 +1,4 @@
-import "./burgerMenu.css";
+import "./burgerMenu.scss";
 import { useState } from "react";
 import { navLinks } from "../../config/navLinks";
 
@@ -14,7 +14,7 @@ function BurgerMenu() {
   };
 
   return (
-    <div className="burgerMenu__wrapper">
+    <div className="burgerMenu">
       <img
         className="burgerMеnu__icon"
         src="/button.svg"
@@ -28,7 +28,7 @@ function BurgerMenu() {
               link.children ? (
                 <div>
                   <li className="burgerMenu__item" key={index} onClick={fSubMenu}>
-                    {link.title} <img src="/shopopen.svg" alt="open sub menu" />
+                    <a href="#">{link.title} <img src="/shopopen.svg" alt="open sub menu" /></a>
                   </li>
                   {subMenuOpen && (
                     <div className="burgerMenu__subMenu">

@@ -1,0 +1,13 @@
+.navigation{
+ 
+    &__list{
+   display: flex;
+    flex-direction: row;
+    gap: var(--fs-s);
+    }
+    
+    // Media queries Navigation
+  @media (max-width: 768px) {
+    display: none;
+  }
+}

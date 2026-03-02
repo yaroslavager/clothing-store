@@ -12,8 +12,8 @@
   /* HIGHLIGHT */
   --color-highlight: rgba(0, 0, 0, 0.1);
   /* FONTS */
-  --font-primary: "IntegralCF", san-serif;
-  --font-secondary: "Satoshi", san-serif;
+  --font-primary: "IntegralCF", sans-serif;
+  --font-secondary: "Satoshi", sans-serif;
   /* FONTS Sizes */
   --fs-hero: 4rem;
   --fs-xxl: 3rem;
@@ -25,4 +25,27 @@
   --fs-base: 1rem;
   --fs-xxs: 0.875rem;
   --fs-xxxs: 0.75rem;
+}
+// FONTS
+/* Satoshi */
+@font-face{
+font-family: "Satoshi";
+src: url("./fonts/Satoshi-Regular.otf") format("opentype");
+  font-style: normal;
+}
+@font-face{
+    font-family: "Satoshi";
+    src: url("./fonts/Satoshi-Bold.otf") format("opentype");
+    font-weight: bold;
+}
+/* Inte */
+@font-face{
+    font-family: "IntegralCF";
+    src: url("./fonts/Fontspring-DEMO-integralcf-regular.otf") format("opentype");
+      font-style: normal;
+}
+@font-face{
+    font-family: "IntegralCF";
+    src: url("./fonts/Fontspring-DEMO-integralcf-bold.otf") format("opentype");
+    font-weight: bold;
 }

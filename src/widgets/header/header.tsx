@@ -1,6 +1,7 @@
-import "./header.css";
-import { navLinks } from "../../shared/config/navLinks";
+import "./header.scss";
+// import { navLinks } from "../../shared/config/navLinks";
 import BurgerMenu from "../../shared/ui/burgerMenu/burgerMenu";
+import Navigation from "./ui/navigation"
 // import ShopMenu from "../BurgerMenu/ShopMenu/ShopMenu"
 
 function Header() {
@@ -16,6 +17,10 @@ function Header() {
               className="header__img-logo"
             />{" "}
           </a>
+        {/* навигация */}
+           {/* код */}
+
+       <Navigation/>
         </div>
         <div className="header__menu">
           <a href="#">
