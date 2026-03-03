@@ -1,16 +1,12 @@
 import "./burgerMenu.scss";
 import { useState } from "react";
 import { navLinks } from "../../config/navLinks";
+import NavList from "../../ui/navList/navList";
 
 function BurgerMenu() {
   const [visibility, setVisibility] = useState(false);
   const fVisibility = () => {
     setVisibility(!visibility);
-  };
-
-  const [subMenuOpen, setSubMenu] = useState(false);
-  const fSubMenu = () => {
-    setSubMenu(!subMenuOpen);
   };
 
   return (
@@ -23,30 +19,7 @@ function BurgerMenu() {
       />
       {visibility && (
         <div className="burgerMenu__list-wrapper">
-          <ul className="burgerMenu__list">
-            {navLinks.map((link, index) =>
-              link.children ? (
-                <div>
-                  <li className="burgerMenu__item" key={index} onClick={fSubMenu}>
-                    <a href="#">{link.title} <img src="/shopopen.svg" alt="open sub menu" /></a>
-                  </li>
-                  {subMenuOpen && (
-                    <div className="burgerMenu__subMenu">
-                      <ul className="burgerMenu__list">
-                        {link.children.map((people, inx) => {
-                          return <li  className="burgerMenu__item" key={inx}><a href="#">{people.title}</a></li>;
-                        })}
-                      </ul>
-                    </div>
-                  )}
-                </div>
-              ) : (
-                <li className="burgerMenu__item" key={index}>
-                  <a href={link.link}>{link.title}</a>
-                </li>
-              ),
-            )}
-          </ul>
+          <NavList Class="burgerMenu" />
         </div>
       )}
     </div>

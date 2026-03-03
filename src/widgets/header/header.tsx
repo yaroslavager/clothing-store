@@ -23,12 +23,15 @@ function Header() {
        <Navigation/>
         </div>
         <div className="header__menu">
-          <a href="#">
+          {/* Search */}
+          
             <img className="header__icon" src="/search.svg" alt="search" />
-          </a>
+          
+          {/* Cart */}
           <a href="#">
             <img className="header__icon" src="/cart.svg" alt="cart" />
           </a>
+          {/* LogIn */}
           <a href="#">
             <img className="header__icon" src="/acc.svg" alt="account" />
           </a>

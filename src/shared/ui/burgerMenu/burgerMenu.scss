@@ -5,19 +5,27 @@
   &__list-wrapper {
     position: absolute;
     left: 0;
-    width: 100%;
+ 
     background-color: var(--color-text-highlight);
     color: var(--color-text-primary);
     margin: 1.5rem 3.5rem;
   }
   &__list {
+    display: flex;
+    flex-direction: column;
+    gap: var( --fs-xs);
     list-style: none;
     font-size: var(--fs-m);
-    padding-bottom: var(--fs-xxs);
+    // padding-bottom: var(--fs-xxs);
     width: fit-content;
   }
-  &__item {
+  &__subList{
+    margin-top: var( --fs-m);
+    font-size: var( --fs-s);
+  }
+  &__subItem {
     padding-bottom: var(--fs-xxs);
+    
   }
 // Media queries BurgerMenu
   @media (min-width: 768px) {

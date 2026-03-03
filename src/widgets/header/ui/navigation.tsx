@@ -1,4 +1,6 @@
+import { useState } from "react";
 import "./navigation.scss";
+import NavList from "../../../shared/ui/navList/navList";
 import { navLinks } from "../../../shared/config/navLinks";
 
 function Navigation(){
@@ -6,15 +8,13 @@ function Navigation(){
     return(
 
         <div className="navigation">
-           
-            <ul className="navigation__list">
-         {navLinks.map((link, index)=> (
-            link.children? link.children.map((link, inx)=> <li key={inx}><img src="" alt="" />{link.title}</li>  )
-
-            :<li key={index}><a href="#">{link.title}</a></li>
-        ))}
-        </ul>
+           <NavList Class="navigation"/>
         </div>
+
+
+
+
+
     )
 }
 export default Navigation

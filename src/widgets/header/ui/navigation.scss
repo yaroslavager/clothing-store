@@ -1,9 +1,18 @@
 .navigation{
- 
+ &__list-wrapper {
+  
+  }
+
     &__list{
    display: flex;
     flex-direction: row;
     gap: var(--fs-s);
+      position: relative;
+    }
+   
+    &__subMenu{
+      position: absolute;
+      top: 2rem;
     }
     
     // Media queries Navigation
