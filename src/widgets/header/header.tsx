@@ -2,6 +2,7 @@ import "./header.scss";
 // import { navLinks } from "../../shared/config/navLinks";
 import BurgerMenu from "../../shared/ui/burgerMenu/burgerMenu";
 import Navigation from "./ui/navigation"
+import Search from "../../features/search/search";
 // import ShopMenu from "../BurgerMenu/ShopMenu/ShopMenu"
 
 function Header() {
@@ -22,11 +23,12 @@ function Header() {
 
        <Navigation/>
         </div>
+         <Search/>
         <div className="header__menu">
           {/* Search */}
-          
-            <img className="header__icon" src="/search.svg" alt="search" />
-          
+        
+         
+
           {/* Cart */}
           <a href="#">
             <img className="header__icon" src="/cart.svg" alt="cart" />
