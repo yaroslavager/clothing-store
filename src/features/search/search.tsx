@@ -7,11 +7,11 @@ const fSearchOpen=()=>{
     setSearchOpen(!isSearchOpen)
 }
   return (
-    <div className="search">
+    <form className="search" role="search"  >
+      <label htmlFor="search-input">
       <svg
         className="search__icon"
-        src="/search.svg"
-        alt="search"
+        aria-hidden="true"
         width="24"
         height="24"
         viewBox="0 0 24 24"
@@ -23,14 +23,17 @@ const fSearchOpen=()=>{
           fill="currentColor"
         />
       </svg>
-
+ </label>
       <input
+      id="search-input"
+      name="search"
         className="search__input"
         type="text"
         placeholder="Search for products"
+        aria-label="Search for products in the catalog"
       />
-
-    </div>
+{/* <button type="submit" className="search__button"></button> */}
+    </form>
   );
 }
 export default Search;

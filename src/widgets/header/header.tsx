@@ -3,6 +3,7 @@ import "./header.scss";
 import BurgerMenu from "../../shared/ui/burgerMenu/burgerMenu";
 import Navigation from "./ui/navigation"
 import Search from "../../features/search/search";
+import AuthForm from "../../features/authForm/authForm";
 // import ShopMenu from "../BurgerMenu/ShopMenu/ShopMenu"
 
 function Header() {
@@ -23,20 +24,17 @@ function Header() {
 
        <Navigation/>
         </div>
+         {/* Search */}
          <Search/>
         <div className="header__menu">
-          {/* Search */}
-        
-         
 
           {/* Cart */}
           <a href="#">
             <img className="header__icon" src="/cart.svg" alt="cart" />
           </a>
           {/* LogIn */}
-          <a href="#">
-            <img className="header__icon" src="/acc.svg" alt="account" />
-          </a>
+<AuthForm/>
+     
         </div>
       </nav>
     </header>
