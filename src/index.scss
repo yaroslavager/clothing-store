@@ -13,7 +13,7 @@ body {
 
 }
 .container {
-  max-width: 77.5rem;
+  max-width: 1240px;
   margin: 0 auto;
 }
 a {
@@ -27,4 +27,5 @@ ul{
 }
 p{
   margin: 0;
+  font-size: clamp(0.875rem, 0.8176rem + 0.2353vw, 1rem);
 }

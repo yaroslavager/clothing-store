@@ -4,9 +4,9 @@ import mainPhoto from "../../shared/assets/mainphoto.png";
 function Hero() {
   return (
     <div className="hero__wrapper">
-<div className="hero__wrap">
+<div className="hero__wrap container">
       <div className="hero__left">
-        <h1 className="hero__h1">FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
+        <h1 className="hero__h1">FIND CLOTHES <br></br>THAT MATCHES <br></br> YOUR STYLE</h1>
         <p className="hero__title">
           Browse through our diverse range of meticulously crafted garments,
           designed to bring out your individuality and cater to your sense of
