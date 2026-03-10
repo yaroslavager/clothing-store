@@ -1,6 +1,5 @@
 import "./burgerMenu.scss";
 import { useState } from "react";
-import { navLinks } from "../../config/navLinks";
 import NavList from "../../ui/navList/navList";
 
 function BurgerMenu() {
@@ -10,16 +9,16 @@ function BurgerMenu() {
   };
 
   return (
-    <div className="burgerMenu">
+    <div className="burger-menu">
       <img
-        className="burgerMеnu__icon"
+        className="burger-menu__icon"
         src="/button.svg"
         alt="burger menu"
         onClick={fVisibility}
       />
       {visibility && (
-        <div className="burgerMenu__list-wrapper">
-          <NavList Class="burgerMenu" />
+        <div className="burger-menu__list-wrapper">
+          <NavList Class="burger-menu" />
         </div>
       )}
     </div>

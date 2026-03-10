@@ -30,7 +30,7 @@
   --bs-w-s: 5rem;
   --bs-m: ;
   --bs-l:; 
-  --bs-xl:; 
+  --bs-xl:13.124rem; 
 // buttons height
 --bs-h-xs:2.43rem;
 --bs-h-s:2.80rem;
@@ -38,6 +38,9 @@
 --bs-h-l:3.25rem;
 // buttons color 
   --bc-primary: rgba(0, 0, 0, 1);
+  // border-radius
+  --br-button-input:3.875rem;
+  --br-cart:1.25rem;
 }
 // FONTS
 /* Satoshi */
@@ -45,6 +48,7 @@
 font-family: "Satoshi";
 src: url("./fonts/Satoshi-Regular.otf") format("opentype");
   font-style: normal;
+  font-weight: normal;
 }
 @font-face{
     font-family: "Satoshi";
@@ -56,6 +60,7 @@ src: url("./fonts/Satoshi-Regular.otf") format("opentype");
     font-family: "IntegralCF";
     src: url("./fonts/Fontspring-DEMO-integralcf-regular.otf") format("opentype");
       font-style: normal;
+      font-weight: normal;
 }
 @font-face{
     font-family: "IntegralCF";

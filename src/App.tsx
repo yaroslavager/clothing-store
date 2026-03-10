@@ -6,6 +6,7 @@ import { useState } from 'react'
 import "./app/variables.scss"
 import Header from './widgets/header/header';
 import AnnouncementBar from './widgets/announcementBar/announcementBar'
+import Hero from './widgets/hero/hero';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
     <>
     <AnnouncementBar/>
      <Header />
+     <Hero/>
 
     </>
   )

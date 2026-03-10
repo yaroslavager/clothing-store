@@ -26,7 +26,7 @@ function AuthForm() {
         <div className="auth-form__overlay">
           <div className="auth-form__modal">
             <div className="auth-form__up">
-              <span>SIGN IN</span>{" "}
+              <span className="auth-form__span">SIGN IN</span>{" "}
               <svg 
               className="auth-form__icon"
              onClick={fModalOpen}
@@ -46,12 +46,12 @@ function AuthForm() {
               <p className="auth-form__title">
                 Sign in with your email or sign up to become a SHOP.CO member.
               </p>
-              <form action="">
+              <form>
                 <label htmlFor="auth-form__input">Email</label>
                 <input
                   id="auth-form__input"
                   className="auth-form__input"
-                  type="text"
+                  type="email"
                   placeholder="Email"
                 />
               </form>
