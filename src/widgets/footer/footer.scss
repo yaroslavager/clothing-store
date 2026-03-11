@@ -1,0 +1,52 @@
+.footer{
+&__wrapper{
+  
+    width: 100%;
+    background-color: var( --color-bg-third);
+    height: 499px;
+}
+&__subscription{
+      visibility: hidden;
+    background-color: var( --color-text-primary);
+    border-radius: var( --br-cart);
+    max-width: 1240px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2.5rem 0;
+}
+&__data-wraper{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    justify-content: center;
+}
+&__input{
+    height:var(--bs-h-m) ;
+    border-radius: var(--br-button-input);
+    border: none;
+    width: var(  --bs-xxl);
+}
+&__button{
+        height:var(--bs-h-m) ;
+        border-radius: var(--br-button-input);
+        border: none;
+        width: var(  --bs-xxl);
+        cursor: pointer;
+}
+&__left{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+&__logo{
+    width: 167px;
+}
+}
+h6{
+    color: var(  --color-text-highlight);
+    font-size: var( --fs-xl);
+    font-family: var( --font-primary);
+    font-weight: 900;
+    margin: 0;
+}

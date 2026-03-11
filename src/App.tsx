@@ -8,6 +8,7 @@ import Header from "./widgets/header/header";
 import AnnouncementBar from "./widgets/announcementBar/announcementBar";
 import Hero from "./widgets/hero/hero";
 import BrandsBanner from "./shared/ui/brandsBanner/brandsBanner";
+import Footer from "./widgets/footer/footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Header />
       <Hero />
       <BrandsBanner />
+<Footer/>
     </>
   );
 }
