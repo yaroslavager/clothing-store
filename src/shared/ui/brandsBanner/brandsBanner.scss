@@ -1,10 +1,30 @@
-.brands-banner{
-    
-    &__wrapper{
-        height: 122px;
-        width: 100%;
-        background-color: var(--color-text-primary);
-    }
+.brands-banner {
+  &__wrapper {
+    background-color: var(--color-text-primary);
+    width: 100%;
+    height: clamp(132px, 125px + 1.6vw, 146px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
+  &__img-wrapper {
+    max-width: 1240px;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     
+    @media (max-width: 768px) {
+      padding: 0 1rem;
+      gap: 1rem 2rem;
+    }
+  }
+  &__icon {
+    height: clamp(20px, 2.5vw, 35px);
+    width: auto;
+  }
 }
