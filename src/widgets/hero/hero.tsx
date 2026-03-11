@@ -16,15 +16,15 @@ function Hero() {
         <div className="hero__footer">
           <div>
             <span className="hero__span">200+</span>
-            <p>International Brands</p>
+            <p className="hero__footer-title">International Brands</p>
           </div>
           <div>
             <span className="hero__span">2,000+</span>
-            <p>High-Quality Products</p>
+            <p className="hero__footer-title">High-Quality Products</p>
           </div>
           <div>
             <span className="hero__span">30,000+</span>
-            <p>Happy Customers</p>
+            <p className="hero__footer-title">Happy Customers</p>
           </div>
         </div>
       </div>
