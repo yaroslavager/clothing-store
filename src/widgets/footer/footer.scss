@@ -1,52 +1,108 @@
-.footer{
-&__wrapper{
-  
+.footer {
+  &__wrapper {
     width: 100%;
-    background-color: var( --color-bg-third);
-    height: 499px;
+    background-color: var(--color-bg-third);
+    // height: 499px;
+  }
+&__wrap{
+    padding: 1rem;
 }
-&__subscription{
-      visibility: hidden;
-    background-color: var( --color-text-primary);
-    border-radius: var( --br-cart);
+  &__subscription {
+    visibility: hidden;
+    background-color: var(--color-text-primary);
+    border-radius: var(--br-cart);
     max-width: 1240px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     padding: 2.5rem 0;
-}
-&__data-wraper{
+  }
+  &__data-wraper {
     display: flex;
     flex-direction: column;
     gap: 14px;
     justify-content: center;
-}
-&__input{
-    height:var(--bs-h-m) ;
+  }
+  &__input {
+    height: var(--bs-h-m);
     border-radius: var(--br-button-input);
     border: none;
-    width: var(  --bs-xxl);
-}
-&__button{
-        height:var(--bs-h-m) ;
-        border-radius: var(--br-button-input);
-        border: none;
-        width: var(  --bs-xxl);
-        cursor: pointer;
-}
-&__left{
+    width: var(--bs-xxl);
+  }
+  &__button {
+    height: var(--bs-h-m);
+    border-radius: var(--br-button-input);
+    border: none;
+    width: var(--bs-xxl);
+    cursor: pointer;
+  }
+  &__info-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 7rem;
+    // приписать ГЭП clamp
+  }
+  &__left {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-}
-&__logo{
+    max-width: 248px;
+  }
+  &__logo {
     width: 167px;
+  }
+  &__p{
+    font-size: var( --fs-xxs);
+    color: var( --color-text-secondary);
+  }
+  &__social-media{
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  &__icon-wrapper{
+display: flex;
+justify-content: center;
+align-items: center;
+
+width: 28px;
+height: 28px;
+border: 1px solid var(--color-highlight2);
+border-radius: 50px;
+background-color: var(  --color-text-highlight);
+cursor: pointer;
+  }
+  &__fb{
+    background-color: var(  --color-text-primary); 
+    border: none;
+  }
+  &__fb:hover{
+border:1px solid var(  --color-text-highlight);
+  }
+  &__icon-wrapper:hover{
+    border-color: var( --color-text-secondary);
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__list-p{
+    font-weight: 600;
+    letter-spacing: 3px;
+  }
+  &__list{
+    margin-top: 1.6rem;
+  }
+  &__list-li{
+     color: var( --color-text-secondary);
+     margin-bottom: 1.4rem;
+  }
 }
-}
-h6{
-    color: var(  --color-text-highlight);
-    font-size: var( --fs-xl);
-    font-family: var( --font-primary);
-    font-weight: 900;
-    margin: 0;
+h6 {
+  color: var(--color-text-highlight);
+  font-size: var(--fs-xl);
+  font-family: var(--font-primary);
+  font-weight: 900;
+  margin: 0;
 }
