@@ -50,7 +50,7 @@ function Footer() {
                
               </div> </a>
 
-          <a href="#">    <div className="footer__icon-wrapper footer__fb">
+          <a href="#">    <div className="footer__icon-wrapper footer__icon-wrapper-fb">
                 
                   <svg
                     width="7"
