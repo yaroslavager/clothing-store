@@ -13,18 +13,18 @@ function Hero() {
           style.
         </p>
         <button className="hero__button"> Shop Now</button>
-        <div className="hero__footer">
-          <div>
+        <div className="hero__bottom">
+          <div className="hero__info-wrapper" >
             <span className="hero__span">200+</span>
-            <p className="hero__footer-title">International Brands</p>
+            <p className="hero__bottom-title">International Brands</p>
           </div>
-          <div>
+          <div className="hero__info-wrapper" >
             <span className="hero__span">2,000+</span>
-            <p className="hero__footer-title">High-Quality Products</p>
+            <p className="hero__bottom-title">High-Quality Products</p>
           </div>
-          <div>
+          <div >
             <span className="hero__span">30,000+</span>
-            <p className="hero__footer-title">Happy Customers</p>
+            <p className="hero__bottom-title">Happy Customers</p>
           </div>
         </div>
       </div>
