@@ -4,7 +4,7 @@ export interface NavLink {
   children?: {title: string, link: string}[];
 }
 
-export const navLinks = [
+export const navLinks: NavLink[]= [
   {
     title: "Shop",
     children: [

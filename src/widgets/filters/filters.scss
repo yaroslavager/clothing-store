@@ -1,10 +1,17 @@
 .filters{
+  
 &__wrapper{
     width: 100%;
     max-width: 295px;
     border-radius:var(  --br-cart) ;
  border: 1px solid var( --color-highlight);
     padding: 1.5rem;
+     fieldset{
+        border: none;
+        margin: 0;
+        padding: 0;
+        min-width: none;
+    } 
 }
 &__border{
 border-color: var(--color-highlight);
@@ -24,6 +31,7 @@ justify-content: space-between;
     font-weight: 700;
     padding-bottom: 1.5rem;
 }
+
 &__price{
     padding-bottom: 1.5rem;
 

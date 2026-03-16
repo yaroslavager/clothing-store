@@ -1,10 +1,10 @@
-export interface footerLinks {
+export interface FooterLinks {
   title: string;
   link?: string;
   children: { title: string; link?: string }[];
 }
 
-export const footerLinks = [
+export const footerLinks: FooterLinks[] = [
   {
     title: "Company",
     children: [

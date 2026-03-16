@@ -12,7 +12,7 @@ function PriceSlider() {
       min={0} 
       max={500} 
       value={price}
-      onChange={(value)=> setPrice(value as number[]) }
+      onChange={(newValue)=> setPrice(newValue as number[]) }
       marks={{
         [price[0]] : `${price[0]}$`,
         [price[1]]: `${price[1]}$`
