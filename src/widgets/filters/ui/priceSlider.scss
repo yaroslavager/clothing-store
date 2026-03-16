@@ -1,0 +1,23 @@
+.price-slider{
+
+
+    .rc-slider-rail{
+    height: 6px;
+}
+.rc-slider-track{
+    height: 6px;
+    background-color: var( --color-text-primary);
+}
+.rc-slider-handle{
+     background-color: var( --color-text-primary);
+     width: 20px;
+     height: 20px;
+     margin-top: -7px;
+}
+.rc-slider-mark-text{
+    font-size: var(  --fs-xxs);
+    color: var(--color-text-primary);
+    font-weight: 600;
+}
+}
+
