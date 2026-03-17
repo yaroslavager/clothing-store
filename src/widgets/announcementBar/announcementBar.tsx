@@ -1,4 +1,4 @@
-import "./announcementBar.css";
+import "./announcementBar.scss";
 import { useState } from "react";
 
 function AnnouncementBar() {
