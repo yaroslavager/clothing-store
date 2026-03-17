@@ -1,6 +1,34 @@
 .color-filter{
-&__input{
+    &__wrapper{
+        display: grid;
+       grid-template-columns: repeat(5, 1fr);
+        gap: 15.5px;
+
+    }
+&__label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    border: 1px solid var(  --color-highlight2);
+    cursor: pointer;
+}
+&__input{
+    position: absolute; 
+  opacity: 0; 
+  width: 0; 
+  height: 0; 
+  margin: 0;
+  padding: 0;
+}
+&__check{
+ opacity: 0;
 }
 
+&__input:checked + &__check{
+opacity: 1;
+filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.8));
+}
 }

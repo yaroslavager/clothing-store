@@ -1,7 +1,19 @@
 import "./filters.scss";
 import PriceSlider from "./ui/priceSlider/priceSlider";
 import ColorFilter from "./ui/colorFilter/colorFilter";
-function Filters() {
+import SizeFilter from "./ui/sizeFilter/sizeFilter";
+
+interface FilterProps{
+  price: number[],
+  setPrice: (newValue: number[]) => void,
+  colorId: number | null,
+  setColor: (id: number)=> void
+}
+
+
+function Filters({ price, setPrice, colorId, setColor }: FilterProps) {
+
+
   return (
     <aside className="filters__wrapper">
       <div className="filters__header">
@@ -27,16 +39,21 @@ function Filters() {
 
       <fieldset className="filters__price">
         <legend className="filters__title">Price</legend>
-        <PriceSlider />
+        <PriceSlider price={price} setPrice={setPrice} />
       </fieldset>
       <hr className="filters__border" />
+
+
       <fieldset className="filters__color">
         <legend className="filters__title">Colors</legend>
-        <ColorFilter />
+        <ColorFilter colorId={colorId} setColor={setColor} />
       </fieldset>
+
+      
       <hr className="filters__border" />
       <fieldset className="filters__size">
         <legend className="filters__title">Size</legend>
+        <SizeFilter/>
       </fieldset>
       <hr className="filters__border" />
       <fieldset className="filters__dress-style">

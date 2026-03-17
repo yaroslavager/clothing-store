@@ -1,13 +1,21 @@
-import Filters from "../../widgets/filters/filters"
-import ColorFilter from "../../widgets/filters/ui/colorFilter/colorFilter"
-function CatalogPage(){
+import { useState } from "react";
+import Filters from "../../widgets/filters/filters";
 
-return(
+
+function CatalogPage() {
+  const [price, setPrice] = useState<number[]>([50, 200]);
+  const [colorId, setColor] = useState<number|null>(null);
+
+  return (
     <main className="container">
-    <Filters/>
-<ColorFilter/>
+      <Filters
+        price={price}
+        setPrice={setPrice}
+        colorId={colorId}
+        setColor={setColor}
+      />
     </main>
-)
+  );
 }
 
-export default CatalogPage
+export default CatalogPage;
