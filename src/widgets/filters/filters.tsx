@@ -7,11 +7,13 @@ interface FilterProps{
   price: number[],
   setPrice: (newValue: number[]) => void,
   colorId: number | null,
-  setColor: (id: number)=> void
+  setColor: (id: number)=> void,
+  chosenSize: string | null,
+  setSize: (size: string| null) => void
 }
 
 
-function Filters({ price, setPrice, colorId, setColor }: FilterProps) {
+function Filters({ price, setPrice, colorId, setColor, chosenSize, setSize }: FilterProps) {
 
 
   return (
@@ -46,7 +48,7 @@ function Filters({ price, setPrice, colorId, setColor }: FilterProps) {
 
       <hr className="filters__border" />
 
-      <SizeFilter/>
+      <SizeFilter chosenSize={chosenSize} setSize={setSize}/>
 
       <hr className="filters__border" />
 

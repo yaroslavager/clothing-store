@@ -1,11 +1,12 @@
 import "./sizeFilter.scss";
 import { sizes } from "../../../../shared/config/sizes";
-import { useState } from "react";
 
+interface SizeProp{
+    chosenSize: string |null,
+    setSize: (size: string|null)=>void
+}
 
-
-function SizeFilter() {
-const [chosenSize, setSize]=useState<string|null>(null)
+function SizeFilter({chosenSize, setSize}: SizeProp) {
 
 
   return (
