@@ -16,11 +16,11 @@ function BurgerMenu() {
         alt="burger menu"
         onClick={fVisibility}
       />
-      {visibility && (
-        <div className="burger-menu__list-wrapper">
+      
+        <div className={`burger-menu__list-wrapper ${visibility ? "burger-menu__list-wrapper--open" : ""}`}      >
           <NavList Class="burger-menu" />
         </div>
-      )}
+      
     </div>
   );
 }

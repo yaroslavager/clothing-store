@@ -10,8 +10,9 @@ import "rc-slider/assets/index.css";
 function PriceSlider({ price, setPrice }: PriceProps) {
 
   return (
-    <>
-      <div className="price-slider">
+    
+      <fieldset className="price-slider">
+          <legend className="price-slider__title">Price</legend>
         <Slider
           range
           min={0}
@@ -23,8 +24,10 @@ function PriceSlider({ price, setPrice }: PriceProps) {
             [price[1]]: `${price[1]}$`,
           }}
         />
-      </div>
-    </>
+      </fieldset>
+    
+
+
   );
 }
 export default PriceSlider;

@@ -35,32 +35,28 @@ function Filters({ price, setPrice, colorId, setColor }: FilterProps) {
       <hr className="filters__border" />
 
       <div className="filters__category">Ul LI</div>
+
       <hr className="filters__border" />
 
-      <fieldset className="filters__price">
-        <legend className="filters__title">Price</legend>
         <PriceSlider price={price} setPrice={setPrice} />
-      </fieldset>
+    
       <hr className="filters__border" />
 
-
-      <fieldset className="filters__color">
-        <legend className="filters__title">Colors</legend>
         <ColorFilter colorId={colorId} setColor={setColor} />
-      </fieldset>
 
-      
       <hr className="filters__border" />
-      <fieldset className="filters__size">
-        <legend className="filters__title">Size</legend>
-        <SizeFilter/>
-      </fieldset>
+
+      <SizeFilter/>
+
       <hr className="filters__border" />
+
       <fieldset className="filters__dress-style">
         <legend className="filters__title">Dress Style</legend>
         ul li
       </fieldset>
-      <button>Apply Filter</button>
+
+
+      <button className="filters__button">Apply Filter</button>
     </aside>
   );
 }

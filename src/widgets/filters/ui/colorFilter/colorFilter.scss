@@ -5,6 +5,11 @@
         gap: 15.5px;
 
     }
+    &__title{
+    font-size: var( --fs-xs);
+    font-weight: 700;
+    padding-bottom: 1.5rem;
+}
 &__label{
     display: flex;
     justify-content: center;

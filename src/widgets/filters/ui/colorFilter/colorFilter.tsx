@@ -10,7 +10,8 @@ interface ColorProps{
 
 function ColorFilter({ colorId, setColor } : ColorProps ){
   return (
-    <div className="color-filter__wrapper">
+    <fieldset className="color-filter__wrapper">
+         <legend className="color-filter__title">Colors</legend>
       {colors.map((color) => (
         <label
           key={color.id}
@@ -42,7 +43,7 @@ function ColorFilter({ colorId, setColor } : ColorProps ){
           </svg>
         </label>
       ))}
-    </div>
+    </fieldset>
   );
 }
 export default ColorFilter;
