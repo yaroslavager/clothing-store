@@ -9,7 +9,7 @@
   --color-primary: rgba(0, 0, 0, 1);
   --color-secondary: rgba(0, 0, 0, 0.6);
   --color-thirdly: rgba(0, 0, 0, 0.4);
-    --color-fourth: rgba(255, 255, 255, 1);
+  --color-fourth: rgba(255, 255, 255, 1);
 
   /* BG */
   --color-bg-secondary: rgba(240, 240, 240, 1);
@@ -18,7 +18,8 @@
   /* HIGHLIGHT */
   --color-highlight: rgba(0, 0, 0, 0.1);
   --color-highlight2: rgba(0, 0, 0, 0.2);
-  --color-highlight3:  rgba(255, 51, 51, 1);
+  --color-highlight3: rgba(255, 51, 51, 1);
+
   /* FONTS */
   --font-primary: "IntegralCF", sans-serif;
   --font-secondary: "Satoshi", sans-serif;
@@ -33,46 +34,47 @@
   --fs-base: 1rem;
   --fs-xxs: 0.875rem;
   --fs-xxxs: 0.75rem;
-  // COMPONENTS 
+  // COMPONENTS
   // buttons width
   --bs-w-s: 5rem;
   --bs-m: 5.5rem;
-  --bs-l: ; 
-  --bs-xl:13.124rem; 
-  --bs-xxl:21rem;
-// buttons height
---bs-h-xs:2.43rem;
---bs-h-s:2.80rem;
---bs-h-m:3rem;
---bs-h-l:3.25rem;
-// buttons color 
+  --bs-l: 3.6rem;
+  --bs-xl: 13.124rem;
+  --bs-xxl: 21rem;
+  // buttons height
+  --bs-h-xxs: 1.8rem;
+  --bs-h-xs: 2.43rem;
+  --bs-h-s: 2.8rem;
+  --bs-h-m: 3rem;
+  --bs-h-l: 3.25rem;
+  // buttons color
   --bc-primary: rgba(0, 0, 0, 1);
   // border-radius
-  --br-button-input:62px;
-  --br-cart:20px;
+  --br-button-input: 62px;
+  --br-cart: 20px;
 }
 // FONTS
 /* Satoshi */
-@font-face{
-font-family: "Satoshi";
-src: url("./fonts/Satoshi-Regular.otf") format("opentype");
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi-Regular.otf") format("opentype");
   font-style: normal;
   font-weight: normal;
 }
-@font-face{
-    font-family: "Satoshi";
-    src: url("./fonts/Satoshi-Bold.otf") format("opentype");
-    font-weight: bold;
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi-Bold.otf") format("opentype");
+  font-weight: bold;
 }
 /* Inte */
-@font-face{
-    font-family: "IntegralCF";
-    src: url("./fonts/Fontspring-DEMO-integralcf-regular.otf") format("opentype");
-      font-style: normal;
-      font-weight: normal;
+@font-face {
+  font-family: "IntegralCF";
+  src: url("./fonts/Fontspring-DEMO-integralcf-regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
 }
-@font-face{
-    font-family: "IntegralCF";
-    src: url("./fonts/Fontspring-DEMO-integralcf-bold.otf") format("opentype");
-    font-weight: bold;
+@font-face {
+  font-family: "IntegralCF";
+  src: url("./fonts/Fontspring-DEMO-integralcf-bold.otf") format("opentype");
+  font-weight: bold;
 }

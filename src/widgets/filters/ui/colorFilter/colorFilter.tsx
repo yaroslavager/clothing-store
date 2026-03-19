@@ -1,17 +1,15 @@
 import "./colorFilter.scss";
 import { colors } from "./colors/colors";
 
-
-interface ColorProps{
-    colorId: number | null;
-    setColor: (id: number)=> void
+interface ColorProps {
+  colorId: number | null;
+  setColor: (id: number) => void;
 }
 
-
-function ColorFilter({ colorId, setColor } : ColorProps ){
+function ColorFilter({ colorId, setColor }: ColorProps) {
   return (
     <fieldset className="color-filter__wrapper">
-         <legend className="color-filter__title">Colors</legend>
+      <legend className="color-filter__title">Colors</legend>
       {colors.map((color) => (
         <label
           key={color.id}
@@ -19,9 +17,9 @@ function ColorFilter({ colorId, setColor } : ColorProps ){
           htmlFor={`color-filter__${color.id}`}
           style={{ backgroundColor: color.hex }}
         >
-          <input 
-          checked={colorId===color.id}
-           onChange={() => setColor(color.id)}
+          <input
+            checked={colorId === color.id}
+            onChange={() => setColor(color.id)}
             id={`color-filter__${color.id}`}
             className="color-filter__input"
             type="checkbox"

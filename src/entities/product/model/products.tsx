@@ -1,3 +1,17 @@
+import id1 from "../../../shared/assets/imgs/products/id1.jpg"
+import id2 from "../../../shared/assets/imgs/products/id2.jpg"
+import id3 from "../../../shared/assets/imgs/products/id3.jpg"
+import id4 from "../../../shared/assets/imgs/products/id4.jpg"
+import id5 from "../../../shared/assets/imgs/products/id5.jpg"
+import id6 from "../../../shared/assets/imgs/products/id6.jpg"
+import id7 from "../../../shared/assets/imgs/products/id7.jpg"
+import id8 from "../../../shared/assets/imgs/products/id8.jpg"
+import id9 from "../../../shared/assets/imgs/products/id9.jpg"
+import id10 from "../../../shared/assets/imgs/products/id10.jpg"
+import id11 from "../../../shared/assets/imgs/products/id11.jpg"
+import id12 from "../../../shared/assets/imgs/products/id12.jpg"
+import id13 from "../../../shared/assets/imgs/products/id13.jpg"
+
 interface Product {
   id: number;
   name: string;
@@ -29,7 +43,7 @@ export const products: Product[] = [
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "new",
-    img: "src/Components/ItemCard/Imgs/photo/id1.jpg",
+    img: id1,
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id1.svg",
       total: 4.5,
@@ -49,7 +63,7 @@ export const products: Product[] = [
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "new",
-    img: "src/Components/ItemCard/Imgs/photo/id2.jpg",
+    img: id2,
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id2.svg",
       total: 3.5,
@@ -69,7 +83,7 @@ export const products: Product[] = [
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "new",
-    img: "src/Components/ItemCard/Imgs/photo/id3.jpg",
+    img: id3,
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id3.svg",
       total: 4.5,
@@ -90,7 +104,7 @@ export const products: Product[] = [
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "new",
-    img: "src/Components/ItemCard/Imgs/photo/id4.jpg",
+    img: id4,
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id4.svg ",
       total: 4.5,
@@ -110,7 +124,7 @@ export const products: Product[] = [
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "old",
-    img: "src/Components/ItemCard/Imgs/photo/id5.jpg",
+    img: id5,
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id5.svg",
       total: 5.0,
@@ -131,7 +145,7 @@ export const products: Product[] = [
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "old",
-    img: "src/Components/ItemCard/Imgs/photo/id6.jpg",
+    img: id6,
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id6.svg",
       total: 4.0,
@@ -152,7 +166,7 @@ export const products: Product[] = [
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "new",
-    img: "src/Components/ItemCard/Imgs/photo/id7.jpg",
+    img: id7,
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id7.svg",
       total: 3.0,
@@ -173,7 +187,7 @@ export const products: Product[] = [
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "old",
-    img: "src/Components/ItemCard/Imgs/photo/id8.jpg",
+    img: id8,
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id8.svg",
       total: 4.5,
@@ -193,7 +207,7 @@ export const products: Product[] = [
     description:
       " This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style. ",
     date: "new",
-    img: "src/Components/ItemCard/Imgs/photo/id9.jpg",
+    img: id9,
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id9.svg",
       total: 4.5,
@@ -214,7 +228,7 @@ export const products: Product[] = [
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "old",
-    img: "src/Components/ItemCard/Imgs/photo/id10.jpg",
+    img: id10,
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id10.svg",
       total: 4.0,
@@ -235,7 +249,7 @@ export const products: Product[] = [
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "new",
-    img: "src/Components/ItemCard/Imgs/photo/id11.jpg",
+    img: id11,
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id11.svg",
       total: 3.5,
@@ -256,7 +270,7 @@ export const products: Product[] = [
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "old",
-    img: "src/Components/ItemCard/Imgs/photo/id12.jpg",
+    img: id12,
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id12.svg",
       total: 4.5,
@@ -277,7 +291,7 @@ export const products: Product[] = [
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "old",
-    img: "src/Components/ItemCard/Imgs/photo/id13.jpg",
+    img: id13,
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id13.svg",
       total: 5.0,

@@ -1,0 +1,8 @@
+.catalog-page{
+    &__wrapper{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+padding: 0 1rem;
+    }
+}

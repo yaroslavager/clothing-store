@@ -3,19 +3,23 @@ import PriceSlider from "./ui/priceSlider/priceSlider";
 import ColorFilter from "./ui/colorFilter/colorFilter";
 import SizeFilter from "./ui/sizeFilter/sizeFilter";
 
-interface FilterProps{
-  price: number[],
-  setPrice: (newValue: number[]) => void,
-  colorId: number | null,
-  setColor: (id: number)=> void,
-  chosenSize: string | null,
-  setSize: (size: string| null) => void
+interface FilterProps {
+  price: number[];
+  setPrice: (newValue: number[]) => void;
+  colorId: number | null;
+  setColor: (id: number) => void;
+  chosenSize: string | null;
+  setSize: (size: string | null) => void;
 }
 
-
-function Filters({ price, setPrice, colorId, setColor, chosenSize, setSize }: FilterProps) {
-
-
+function Filters({
+  price,
+  setPrice,
+  colorId,
+  setColor,
+  chosenSize,
+  setSize,
+}: FilterProps) {
   return (
     <aside className="filters__wrapper">
       <div className="filters__header">
@@ -40,15 +44,15 @@ function Filters({ price, setPrice, colorId, setColor, chosenSize, setSize }: Fi
 
       <hr className="filters__border" />
 
-        <PriceSlider price={price} setPrice={setPrice} />
-    
-      <hr className="filters__border" />
-
-        <ColorFilter colorId={colorId} setColor={setColor} />
+      <PriceSlider price={price} setPrice={setPrice} />
 
       <hr className="filters__border" />
 
-      <SizeFilter chosenSize={chosenSize} setSize={setSize}/>
+      <ColorFilter colorId={colorId} setColor={setColor} />
+
+      <hr className="filters__border" />
+
+      <SizeFilter chosenSize={chosenSize} setSize={setSize} />
 
       <hr className="filters__border" />
 
@@ -56,7 +60,6 @@ function Filters({ price, setPrice, colorId, setColor, chosenSize, setSize }: Fi
         <legend className="filters__title">Dress Style</legend>
         ul li
       </fieldset>
-
 
       <button className="filters__button">Apply Filter</button>
     </aside>

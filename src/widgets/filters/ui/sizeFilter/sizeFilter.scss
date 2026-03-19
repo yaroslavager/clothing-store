@@ -1,45 +1,42 @@
-.size-filter{
-    &__wrapper{
-    
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
-    }
-    &__title{
-    font-size: var( --fs-xs);
+.size-filter {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  &__title {
+    font-size: var(--fs-xs);
     font-weight: 700;
     padding-bottom: 1.5rem;
-}
+  }
 
-&__label{
+  &__label {
     display: flex;
     justify-content: center;
     align-items: center;
-width: var( --bs-m);
-height: var(--bs-h-xs);
-background-color: var(  --color-bg-secondary);
-border-radius: var( --br-button-input);
-cursor: pointer;
-}
+    width: var(--bs-m);
+    height: var(--bs-h-xs);
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--br-button-input);
+    cursor: pointer;
+  }
 
-&__input{
+  &__input {
     position: absolute;
     width: 0;
     height: 0;
     opacity: 0;
     margin: 0;
     padding: 0;
-
-}
-&__label--chosen{
+  }
+  &__label--chosen {
     background-color: var(--color-primary);
-   
-}
-&__name{
-    color: var(  --color-secondary);
-    font-size: var( --fs-xs);
-}
-&__name--chosen{
- color: var(  --color-fourth);
-}
+  }
+  &__name {
+    color: var(--color-secondary);
+    font-size: var(--fs-xs);
+  }
+  &__name--chosen {
+    color: var(--color-fourth);
+  }
 }
