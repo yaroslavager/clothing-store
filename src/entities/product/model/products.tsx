@@ -1,16 +1,16 @@
-import id1 from "../../../shared/assets/imgs/products/id1.jpg"
-import id2 from "../../../shared/assets/imgs/products/id2.jpg"
-import id3 from "../../../shared/assets/imgs/products/id3.jpg"
-import id4 from "../../../shared/assets/imgs/products/id4.jpg"
-import id5 from "../../../shared/assets/imgs/products/id5.jpg"
-import id6 from "../../../shared/assets/imgs/products/id6.jpg"
-import id7 from "../../../shared/assets/imgs/products/id7.jpg"
-import id8 from "../../../shared/assets/imgs/products/id8.jpg"
-import id9 from "../../../shared/assets/imgs/products/id9.jpg"
-import id10 from "../../../shared/assets/imgs/products/id10.jpg"
-import id11 from "../../../shared/assets/imgs/products/id11.jpg"
-import id12 from "../../../shared/assets/imgs/products/id12.jpg"
-import id13 from "../../../shared/assets/imgs/products/id13.jpg"
+import id1 from "../../../shared/assets/imgs/products/id1.jpg";
+import id2 from "../../../shared/assets/imgs/products/id2.jpg";
+import id3 from "../../../shared/assets/imgs/products/id3.jpg";
+import id4 from "../../../shared/assets/imgs/products/id4.jpg";
+import id5 from "../../../shared/assets/imgs/products/id5.jpg";
+import id6 from "../../../shared/assets/imgs/products/id6.jpg";
+import id7 from "../../../shared/assets/imgs/products/id7.jpg";
+import id8 from "../../../shared/assets/imgs/products/id8.jpg";
+import id9 from "../../../shared/assets/imgs/products/id9.jpg";
+import id10 from "../../../shared/assets/imgs/products/id10.jpg";
+import id11 from "../../../shared/assets/imgs/products/id11.jpg";
+import id12 from "../../../shared/assets/imgs/products/id12.jpg";
+import id13 from "../../../shared/assets/imgs/products/id13.jpg";
 
 interface Product {
   id: number;
@@ -39,7 +39,7 @@ export const products: Product[] = [
     sex: "men",
     style: "casual",
     color: "black",
-    size: ["xs", "s" , "m", "l", "xl"],
+    size: ["xs", "s", "m", "l", "xl"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "new",
@@ -59,7 +59,7 @@ export const products: Product[] = [
     sex: "men",
     style: "casual",
     color: "dark blue",
-    size: ["xs", "s" ,"xl"],
+    size: ["xs", "s", "xl"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "new",
@@ -79,7 +79,7 @@ export const products: Product[] = [
     sex: "men",
     style: "casual",
     color: "pink",
-    size: [ "s" , "m", "l", "xl"],
+    size: ["s", "m", "l", "xl"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "new",
@@ -120,7 +120,7 @@ export const products: Product[] = [
     sex: "men",
     style: "formal",
     color: "green",
-    size: ["xs", "s" , "m", "l", "xl"],
+    size: ["xs", "s", "m", "l", "xl"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "old",
@@ -141,7 +141,7 @@ export const products: Product[] = [
     sex: "men",
     style: "casual",
     color: "orange",
-    size: [ "m", "l"],
+    size: ["m", "l"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "old",
@@ -183,7 +183,7 @@ export const products: Product[] = [
     sex: "women",
     style: "casual",
     color: "black",
-    size: ["s" , "m", "l"],
+    size: ["s", "m", "l"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "old",
@@ -203,7 +203,7 @@ export const products: Product[] = [
     sex: "men",
     style: "party",
     color: "green",
-    size: ["xs", "s" , "m", "l", "xl"],
+    size: ["xs", "s", "m", "l", "xl"],
     description:
       " This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style. ",
     date: "new",
@@ -224,7 +224,7 @@ export const products: Product[] = [
     sex: "men",
     style: "casual",
     color: "dark blue",
-    size: ["xs", "s" , "l", "xl"],
+    size: ["xs", "s", "l", "xl"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "old",
@@ -245,7 +245,7 @@ export const products: Product[] = [
     sex: "men",
     style: "casual",
     color: "white",
-    size: ["xs", "s" , "m", "l", "xl"],
+    size: ["xs", "s", "m", "l", "xl"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "new",
@@ -266,7 +266,7 @@ export const products: Product[] = [
     sex: "men",
     style: "casual",
     color: "pink",
-    size: ["s" , "m",  "xl"],
+    size: ["s", "m", "xl"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "old",
@@ -287,7 +287,7 @@ export const products: Product[] = [
     sex: "men",
     style: "sport",
     color: "black",
-    size: ["xs", "s" , "m", "l"],
+    size: ["xs", "s", "m", "l"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "old",

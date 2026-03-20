@@ -1,4 +1,5 @@
 import "./header.scss";
+import { Link } from "react-router-dom";
 // import { navLinks } from "../../shared/config/navLinks";
 import BurgerMenu from "../../shared/ui/burgerMenu/burgerMenu";
 import Navigation from "./ui/navigation"
@@ -12,13 +13,13 @@ function Header() {
       <nav className="header__nav">
         <div className="header__left">
           <BurgerMenu />
-          <a href="#">
+          <Link to="/">
             <img
               src="/logo.svg"
               alt="SHOP.CO"
               className="header__img-logo"
-            />{" "}
-          </a>
+            />
+          </Link>
         {/* навигация */}
            {/* код */}
 

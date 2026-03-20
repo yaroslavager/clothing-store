@@ -18,7 +18,7 @@ function CatalogPage() {
         chosenSize={chosenSize}
         setSize={setSize}
       />
-      <ProductGrid/>
+      <ProductGrid title="Casual" showCount/>
     </main>
   );
 }
