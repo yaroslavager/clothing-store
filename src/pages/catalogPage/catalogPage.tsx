@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./catalogPage.scss"
+import "./catalogPage.scss";
 import Filters from "../../widgets/filters/filters";
 import ProductGrid from "../../widgets/productGrid/productGrid";
 
@@ -18,7 +18,7 @@ function CatalogPage() {
         chosenSize={chosenSize}
         setSize={setSize}
       />
-      <ProductGrid title="Casual" showCount/>
+      <ProductGrid title="Casual" showCount />
     </main>
   );
 }

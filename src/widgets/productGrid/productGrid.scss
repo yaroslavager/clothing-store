@@ -9,66 +9,61 @@
     align-items: center;
     gap: clamp(0.1875rem, -0.1853rem + 1.5294vw, 1rem);
   }
-  &__columns{
-grid-template-columns: repeat(4,1fr);
+  &__columns {
+    grid-template-columns: repeat(4, 1fr);
   }
 
-  
-  &__head{
+  &__head {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 29px;
   }
-  &__head--settings{
+  &__head--settings {
     justify-content: center;
-    margin:55px;
-    
+    margin: 55px;
   }
-  &__product-title{
-color: var( --color-secondary);
-
+  &__product-title {
+    color: var(--color-secondary);
   }
-&__filter-icon-wrapper{
-  cursor: pointer;
-  display: none;
-  justify-content: center;
-  align-items: center;
-width: 32px;
-height: 32px;
-border-radius: var(--br-button-input);
-background-color: var(--color-bg-secondary);
-}
+  &__filter-icon-wrapper {
+    cursor: pointer;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: var(--br-button-input);
+    background-color: var(--color-bg-secondary);
+  }
 
   &__img {
     width: clamp(10.75rem, 6.2228rem + 13.4706vw, 17.4375rem);
     height: clamp(10.87rem, 6.3191rem + 13.5882vw, 17.625rem);
     border-radius: var(--br-cart);
   }
-  &__filters-icon{
-
+  &__filters-icon {
   }
   &__title {
-   font-size: var(  --fs-l);
-   font-weight: 600; 
+    font-size: var(--fs-l);
+    font-weight: 600;
   }
-  &__product{
+  &__product {
     min-width: 0;
-
   }
-  &__product-info{
+  &__product-info {
     display: flex;
     flex-direction: column;
-     gap: clamp(0.25rem, 0.1353rem + 0.4706vw, 0.5rem) ;
+    gap: clamp(0.25rem, 0.1353rem + 0.4706vw, 0.5rem);
   }
-  &__product-name{
-     font-size: clamp(1rem, 0.8853rem + 0.4706vw, 1.25rem);
+  &__product-name {
+    font-size: clamp(1rem, 0.8853rem + 0.4706vw, 1.25rem);
     font-weight: 600;
-       text-overflow: ellipsis;
-         white-space: nowrap;
-  overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
- 
+
   &__reviews-grade {
     font-size: var(--fs-xxs);
   }
@@ -80,7 +75,7 @@ background-color: var(--color-bg-secondary);
     font-size: clamp(1rem, 0.8853rem + 0.4706vw, 1.25rem);
     font-weight: 600;
   }
- 
+
   &__price--full-price {
     color: var(--color-thirdly);
     text-decoration: line-through;
@@ -96,19 +91,22 @@ background-color: var(--color-bg-secondary);
     border-radius: var(--br-button-input);
     background-color: var(--color-bg-discount);
   }
-  &__button{
-    width: var(   --bs-xl);
-    height: var(  --bs-h-l);
-    border-radius: var( --br-button-input);
-    font-size: var(  --fs-base);
+  &__button {
+    width: var(--bs-xl);
+    height: var(--bs-h-l);
+    border-radius: var(--br-button-input);
+    font-size: var(--fs-base);
     font-weight: 600;
-    border: 1px solid var(  --color-highlight);
+    border: 1px solid var(--color-highlight);
     background-color: transparent;
-        display: block;
-margin: 0 auto;
-cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    margin-top: 2.25rem;
+    margin-bottom: 4rem;
+    padding: 0;
+    cursor: pointer;
   }
-  &__button:hover{
+  &__button:hover {
     background-color: var(--color-highlight);
   }
 
@@ -118,16 +116,40 @@ cursor: pointer;
       grid-template-columns: repeat(2, 1fr);
       gap: clamp(0.25rem, -0.0368rem + 1.1765vw, 0.875rem);
       padding: 0rem;
+  
+    }
+    &__columns {
+       grid-template-columns: repeat(4, 298px);
+       gap: 16px;
+       overflow-x: auto;
+       padding: 0;
+       margin: 0;
+       
+    }
+    &__columns &__img{
+      width: 295px;
+      height: 298px;
+
     }
   }
-  @media(max-width:768px){
-    &__filter-icon-wrapper{
+  @media (max-width: 768px) {
+    &__filter-icon-wrapper {
       display: flex;
       justify-content: center;
     }
-  }
-   @media (max-width: 390px) {
-      padding: 0;
-    } 
+    &__columns{
+      grid-template-columns: repeat(4, 198px);
+    }
+  &__columns &__img{
+      width: 198px;
+      height: 200px;
 
+    }
+
+  }
+  @media (max-width: 390px) {
+    padding: 0;
+
+
+  }
 }

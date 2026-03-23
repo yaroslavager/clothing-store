@@ -29,3 +29,6 @@ p{
   margin: 0;
   font-size: clamp(0.875rem, 0.8176rem + 0.2353vw, 1rem);
 }
+hr{
+  border: 1px solid var(  --color-highlight);
+}
