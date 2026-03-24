@@ -12,7 +12,7 @@ import id11 from "../../../shared/assets/imgs/products/id11.jpg";
 import id12 from "../../../shared/assets/imgs/products/id12.jpg";
 import id13 from "../../../shared/assets/imgs/products/id13.jpg";
 
-interface Product {
+export interface Product {
   id: number;
   name: string;
   category: string;

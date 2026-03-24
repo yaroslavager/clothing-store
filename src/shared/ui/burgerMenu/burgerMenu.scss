@@ -4,7 +4,7 @@
   }
   &__list-wrapper {
     position: absolute;
-
+z-index: 100;
     left: 0;
     background-color: var(--color-text-highlight);
     color: var(--color-text-primary);

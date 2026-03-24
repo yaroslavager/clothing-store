@@ -18,7 +18,7 @@ function HomePage() {
 <hr className="container"/>
       <ProductGrid
         title="Top Selling"
-        filter={(product) => product.reviews.total > 4}
+        filter={(product) => product.reviews?.total > 4}
         limit={4}
         showButton
         settings

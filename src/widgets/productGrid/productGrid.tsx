@@ -1,5 +1,16 @@
 import "./productGrid.scss";
-import { products } from "../../entities/product/model/products";
+import { products, type Product } from "../../entities/product/model/products";
+
+interface ProductGridProps{
+  title: string,
+  filter?: (product: Product)=>boolean,
+  showCount?: boolean,
+  showButton?: boolean,
+  limit?: number,
+  settings?: boolean,
+  columns?: boolean,
+  filtersIsOpen?: ()=>void 
+}
 
 function ProductGrid({
   title,
@@ -9,7 +20,8 @@ function ProductGrid({
   limit,
   settings = false,
   columns = false,
-}) {
+  filtersIsOpen
+}: ProductGridProps) {
   const filtred = filter ? products.filter(filter) : products;
   const displayed = limit ? filtred.slice(0, limit) : filtred;
   return (
@@ -21,7 +33,13 @@ function ProductGrid({
         <p className="product-grid__product-title">
           {showCount && `Showing 1-10 of ${products.length} Products`}
         </p>
-        <div className="product-grid__filter-icon-wrapper">
+
+        <div
+         onClick={filtersIsOpen}
+         className="product-grid__filter-icon-wrapper">
+
+
+
           <svg
             className="product-grid__filters-icon"
             width="16"

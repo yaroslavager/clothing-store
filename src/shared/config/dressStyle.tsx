@@ -1,0 +1,1 @@
+export const dressStyle=["Casual", "Formal", "Party", "Gym"]
