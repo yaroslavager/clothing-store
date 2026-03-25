@@ -42,8 +42,6 @@
     height: clamp(10.87rem, 6.3191rem + 13.5882vw, 17.625rem);
     border-radius: var(--br-cart);
   }
-  &__filters-icon {
-  }
   &__title {
     font-size: var(--fs-l);
     font-weight: 600;
@@ -66,30 +64,6 @@
 
   &__reviews-grade {
     font-size: var(--fs-xxs);
-  }
-  &__price {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.6rem;
-    font-size: clamp(1rem, 0.8853rem + 0.4706vw, 1.25rem);
-    font-weight: 600;
-  }
-
-  &__price--full-price {
-    color: var(--color-thirdly);
-    text-decoration: line-through;
-  }
-  &__discount {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: var(--fs-xxxs);
-    color: var(--color-highlight3);
-    width: clamp(2.625rem, 2.2522rem + 1.5294vw, 3.4375rem);
-    height: clamp(1.25rem, 1.0206rem + 0.9412vw, 1.75rem);
-    border-radius: var(--br-button-input);
-    background-color: var(--color-bg-discount);
   }
   &__button {
     width: var(--bs-xl);

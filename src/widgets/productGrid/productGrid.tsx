@@ -1,15 +1,17 @@
 import "./productGrid.scss";
 import { products, type Product } from "../../entities/product/model/products";
+import { Link } from "react-router-dom";
+import ProductPrice from "../../shared/ui/productPrice/productPrice";
 
-interface ProductGridProps{
-  title: string,
-  filter?: (product: Product)=>boolean,
-  showCount?: boolean,
-  showButton?: boolean,
-  limit?: number,
-  settings?: boolean,
-  columns?: boolean,
-  filtersIsOpen?: ()=>void 
+interface ProductGridProps {
+  title: string;
+  filter?: (product: Product) => boolean;
+  showCount?: boolean;
+  showButton?: boolean;
+  limit?: number;
+  settings?: boolean;
+  columns?: boolean;
+  filtersIsOpen?: () => void;
 }
 
 function ProductGrid({
@@ -20,7 +22,7 @@ function ProductGrid({
   limit,
   settings = false,
   columns = false,
-  filtersIsOpen
+  filtersIsOpen,
 }: ProductGridProps) {
   const filtred = filter ? products.filter(filter) : products;
   const displayed = limit ? filtred.slice(0, limit) : filtred;
@@ -35,11 +37,9 @@ function ProductGrid({
         </p>
 
         <div
-         onClick={filtersIsOpen}
-         className="product-grid__filter-icon-wrapper">
-
-
-
+          onClick={filtersIsOpen}
+          className="product-grid__filter-icon-wrapper"
+        >
           <svg
             className="product-grid__filters-icon"
             width="16"
@@ -59,6 +59,9 @@ function ProductGrid({
         className={`product-grid__wrapper ${columns ? "product-grid__columns" : ""}`}
       >
         {displayed.map((product) => (
+
+<Link to={`/product/${product.id}`}>
+
           <div key={product.id} className="product-grid__product">
             <img className="product-grid__img" src={product.img} alt="" />
             <div className="product-grid__product-info">
@@ -71,28 +74,14 @@ function ProductGrid({
                     {product.reviews.total}/5
                   </span>
                 </div>
+
               )}
 
-              <div className="product-grid__price">
-                <span className="product-grid__price--current-price">
-                  $
-                  {product.discount
-                    ? product.price - (product.price * product.discount) / 100
-                    : product.price}
-                </span>
-                {product.discount && (
-                  <>
-                    <span className="product-grid__price--full-price">
-                      ${product.price}
-                    </span>
-                    <span className="product-grid__discount">
-                      -{product.discount}%
-                    </span>
-                  </>
-                )}
-              </div>
+              <ProductPrice price={product.price} discount={product.discount} />
             </div>
           </div>
+</Link>
+
         ))}
       </div>
       {showButton && <button className="product-grid__button">View All</button>}
