@@ -15,7 +15,7 @@
 &__info{
 display: flex;
 flex-direction: column;
-gap: 15px;
+// gap: 15px;
 }
 &__h1{
     font-size: var( --fs-xl);
@@ -33,12 +33,25 @@ gap: 15px;
 width: 100%;
 margin: 24px 0;
 }
-
+&__size-selection{
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
 &__sizes{
     display: flex;
+    gap: 12px;
    
 }
-&__size{
+&__size-input{
+    width: 0;
+    height: 0;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+}
+
+&__size-label{
     display: flex;
      justify-content: center;
     align-items: center;
@@ -47,5 +60,69 @@ margin: 24px 0;
     color: var(  --color-secondary);
     background-color: var(   --color-bg-secondary);
     border-radius: var( --br-button-input);
+    &--chosen{
+         background-color: var(  --color-primary); 
+         color: var(  --color-fourth);
+    }
+}
+&__colors-wrapper{
+    display: flex;
+    gap:16px ;
+}
+&__color-selection{
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+&__colors-input{
+  width: 0;
+    height: 0;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+}
+&__colors-label{
+    display: block;
+    
+width:37px ;
+height: 37px;
+border-radius: 50%;
+
+}
+&__add-product{
+    display: flex;
+    gap: 20px;
+}
+&__count{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: var( --br-button-input);
+    width: 170px;
+    height: 52px ;
+    background-color: var(  --color-bg-secondary);
+}
+&__count-button{
+    cursor: pointer;
+    border: none;
+    background-color: none;
+    font-size: 2rem;
+}
+&__button{
+    width: 100%;
+    border-radius: var(--br-button-input);
+    border: none;
+    background-color: var(  --color-primary);
+    color: var(  --color-fourth);
+    cursor: pointer;
+}
+// MEDIA
+
+@media(max-width:768px){
+&__wrapper{
+    flex-direction: column;
+}
+
+
 }
 }

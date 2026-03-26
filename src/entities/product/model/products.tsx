@@ -18,7 +18,7 @@ export interface Product {
   category: string;
   sex: string;
   style: string;
-  color: string;
+  color?: string [] | null;
   size: ("xs" | "s" | "m" | "l" | "xl")[];
   description: string;
   date: "new" | "old";
@@ -38,7 +38,7 @@ export const products: Product[] = [
     category: "T-shirt",
     sex: "men",
     style: "casual",
-    color: "black",
+    color: ["black"],
     size: ["xs", "s", "m", "l", "xl"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
@@ -58,7 +58,7 @@ export const products: Product[] = [
     category: "Jeans",
     sex: "men",
     style: "casual",
-    color: "dark blue",
+    color: ["dark blue", "light blue"],
     size: ["xs", "s", "xl"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
@@ -78,7 +78,7 @@ export const products: Product[] = [
     category: "Shirt",
     sex: "men",
     style: "casual",
-    color: "pink",
+    color: ["pink"],
     size: ["s", "m", "l", "xl"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
@@ -99,7 +99,7 @@ export const products: Product[] = [
     category: "T-shirt",
     sex: "men",
     style: "casual",
-    color: "orange",
+    color: ["orange"],
     size: ["xs", "m", "l"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
@@ -119,7 +119,7 @@ export const products: Product[] = [
     category: "Shirt",
     sex: "men",
     style: "formal",
-    color: "green",
+    color: ["green"],
     size: ["xs", "s", "m", "l", "xl"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
@@ -140,7 +140,7 @@ export const products: Product[] = [
     category: "T-shirt",
     sex: "men",
     style: "casual",
-    color: "orange",
+    color: ["orange"],
     size: ["m", "l"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
@@ -161,7 +161,7 @@ export const products: Product[] = [
     category: "Shorts",
     sex: "men",
     style: "casual",
-    color: "light blue",
+    color: ["light blue"],
     size: ["xs", "s"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
@@ -182,7 +182,7 @@ export const products: Product[] = [
     category: "Jeans",
     sex: "women",
     style: "casual",
-    color: "black",
+    color: ["black"],
     size: ["s", "m", "l"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
@@ -202,7 +202,7 @@ export const products: Product[] = [
     category: "T-shirt",
     sex: "men",
     style: "party",
-    color: "green",
+    color: ["green"],
     size: ["xs", "s", "m", "l", "xl"],
     description:
       " This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style. ",
@@ -223,7 +223,7 @@ export const products: Product[] = [
     category: "T-shirt",
     sex: "men",
     style: "casual",
-    color: "dark blue",
+    color: ["dark blue"],
     size: ["xs", "s", "l", "xl"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
@@ -244,7 +244,7 @@ export const products: Product[] = [
     category: "T-shirt",
     sex: "men",
     style: "casual",
-    color: "white",
+    color: ["white"],
     size: ["xs", "s", "m", "l", "xl"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
@@ -265,7 +265,7 @@ export const products: Product[] = [
     category: "T-shirt",
     sex: "men",
     style: "casual",
-    color: "pink",
+    color: ["pink"],
     size: ["s", "m", "xl"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
@@ -286,7 +286,7 @@ export const products: Product[] = [
     category: "T-shirt",
     sex: "men",
     style: "sport",
-    color: "black",
+    color: ["black"],
     size: ["xs", "s", "m", "l"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
