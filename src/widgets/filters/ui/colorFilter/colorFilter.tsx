@@ -1,5 +1,5 @@
 import "./colorFilter.scss";
-import { colors } from "./colors/colors";
+import { colors } from "../../../../shared/config/colors";
 
 interface ColorProps {
   colorId: number | null;

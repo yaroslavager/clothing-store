@@ -18,7 +18,7 @@ export interface Product {
   category: string;
   sex: string;
   style: string;
-  color?: string [] | null;
+  color?: string[] | null;
   size: ("xs" | "s" | "m" | "l" | "xl")[];
   description: string;
   date: "new" | "old";

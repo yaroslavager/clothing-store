@@ -1,15 +1,14 @@
 import "./productPage.scss";
 import { useParams } from "react-router-dom";
 import { products } from "../../entities/product/model/products";
-import { colors } from "../../widgets/filters/ui/colorFilter/colors/colors";
+import { colors } from "../../shared/config/colors";
 import ProductPrice from "../../shared/ui/productPrice/productPrice";
 
 import { useState } from "react";
 
 function ProductPage() {
   const [chosenSize, setSize] = useState<string | null>(null);
-  const [count, setCount]=useState(0)
-
+  const [count, setCount] = useState(0);
 
   const { id } = useParams();
   const product = products.find((product) => product.id === Number(id));
@@ -29,23 +28,26 @@ function ProductPage() {
         <hr className="product-page__hr" />
         <div className="product-page__color-selection">
           <p>Select Colors</p>
-<div className="product-page__colors-wrapper">
-          {product.color?.map((color) => {
-            const hex=colors.find(c=> c.name === color) ?.hex ?? "transparent"
-return  <label key={color}
-              htmlFor={`product-page__${color}`}
-              className="product-page__colors-label"
-              style={{backgroundColor: hex}}
-            >
-              <input
-                id={`product-page__${color}`}
-                className="product-page__colors-input"
-                type="checkbox"
-              />
-            </label>
-          }
-          )}
-</div>
+          <div className="product-page__colors-wrapper">
+            {product.color?.map((color) => {
+              const hex =
+                colors.find((c) => c.name === color)?.hex ?? "transparent";
+              return (
+                <label
+                  key={color}
+                  htmlFor={`product-page__${color}`}
+                  className="product-page__colors-label"
+                  style={{ backgroundColor: hex }}
+                >
+                  <input
+                    id={`product-page__${color}`}
+                    className="product-page__colors-input"
+                    type="checkbox"
+                  />
+                </label>
+              );
+            })}
+          </div>
         </div>
         <hr className="product-page__hr" />
         <div className="product-page__size-selection">
@@ -69,13 +71,27 @@ return  <label key={color}
             ))}
           </div>
         </div>
-          <hr className="product-page__hr" />
-          <div className="product-page__add-product">
-            <div className="product-page__count"> <button className="product-page__count-button" onClick={()=>count>0 && setCount(prev=>prev-1)}>-</button> <span>{count}</span> <button className="product-page__count-button" onClick={()=>setCount(prev=>prev+1)}>+</button>   </div>
-
-<button className="product-page__button">Add to Cart</button>
-
+        <hr className="product-page__hr" />
+        <div className="product-page__add-product">
+          <div className="product-page__count">
+            {" "}
+            <button
+              className="product-page__count-button"
+              onClick={() => count > 0 && setCount((prev) => prev - 1)}
+            >
+              -
+            </button>{" "}
+            <span>{count}</span>{" "}
+            <button
+              className="product-page__count-button"
+              onClick={() => setCount((prev) => prev + 1)}
+            >
+              +
+            </button>{" "}
           </div>
+
+          <button className="product-page__button">Add to Cart</button>
+        </div>
       </div>
     </div>
   );

@@ -1,9 +1,10 @@
 import "./productGrid.scss";
-import { products, type Product } from "../../entities/product/model/products";
+import { type Product } from "../../entities/product/model/products";
 import { Link } from "react-router-dom";
 import ProductPrice from "../../shared/ui/productPrice/productPrice";
 
 interface ProductGridProps {
+  products: Product[],
   title: string;
   filter?: (product: Product) => boolean;
   showCount?: boolean;
@@ -15,6 +16,7 @@ interface ProductGridProps {
 }
 
 function ProductGrid({
+  products,
   title,
   filter,
   showCount = false,
@@ -36,7 +38,7 @@ function ProductGrid({
           {showCount && `Showing 1-10 of ${products.length} Products`}
         </p>
 
-        <div
+        <button
           onClick={filtersIsOpen}
           className="product-grid__filter-icon-wrapper"
         >
@@ -53,35 +55,34 @@ function ProductGrid({
               fill="black"
             />
           </svg>
-        </div>
+        </button>
       </div>
       <div
         className={`product-grid__wrapper ${columns ? "product-grid__columns" : ""}`}
       >
         {displayed.map((product) => (
+          <Link key={product.id} to={`/product/${product.id}`}>
+            <div  className="product-grid__product">
+              <img className="product-grid__img" src={product.img} alt="" />
+              <div className="product-grid__product-info">
+                <p className="product-grid__product-name">{product.name}</p>
+                {/* звезды */}
+                {product.reviews && (
+                  <div className="product-grid__reviews">
+                    здесь звезды{" "}
+                    <span className="product-grid__reviews-grade">
+                      {product.reviews.total}/5
+                    </span>
+                  </div>
+                )}
 
-<Link to={`/product/${product.id}`}>
-
-          <div key={product.id} className="product-grid__product">
-            <img className="product-grid__img" src={product.img} alt="" />
-            <div className="product-grid__product-info">
-              <p className="product-grid__product-name">{product.name}</p>
-              {/* звезды */}
-              {product.reviews && (
-                <div className="product-grid__reviews">
-                  здесь звезды{" "}
-                  <span className="product-grid__reviews-grade">
-                    {product.reviews.total}/5
-                  </span>
-                </div>
-
-              )}
-
-              <ProductPrice price={product.price} discount={product.discount} />
+                <ProductPrice
+                  price={product.price}
+                  discount={product.discount}
+                />
+              </div>
             </div>
-          </div>
-</Link>
-
+          </Link>
         ))}
       </div>
       {showButton && <button className="product-grid__button">View All</button>}

@@ -1,0 +1,15 @@
+.cart-page{
+&__order-wrapper{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+&__products {
+    border: 1px solid var(  --color-highlight);
+    border-radius: var(--br-cart);
+}
+&__info-wrapper{
+     border: 1px solid var(  --color-highlight);
+    border-radius: var(--br-cart);
+}
+}
