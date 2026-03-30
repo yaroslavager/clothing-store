@@ -48,9 +48,69 @@ function CartPage() {
             </div>
           ))}
         </div>
+
         <div className="cart-page__info-wrapper">
-          <h2>Order Summary</h2>
-          ЗДЕСЬ ИНФА{" "}
+          <h2 className="cart-page__info-title">Order Summary</h2>
+
+          <div className="cart-page__info">
+            <div className="cart-page__info-price">
+              <p className="cart-page__info-price-title">Subtotal</p>
+              <span className="cart-page__price">
+                ${cartItems.reduce((acc, el) => el.price + acc, 0)}
+              </span>
+            </div>
+            <div className="cart-page__info-price">
+              <p className="cart-page__info-price-title">Discount</p>
+              <span className="cart-page__info-price--discount">
+                {cartItems.some((el) => el.discount > 0) ? `-` : ``}$
+                {cartItems.reduce(
+                  (acc, el) => (el.discount ? el.discount + acc : acc),
+                  0,
+                )}
+              </span>
+            </div>
+          </div>
+          <hr />
+          <div className="cart-page__total-price">
+            <p>Total</p>{" "}
+            <span className="cart-page__price">
+              {cartItems.reduce(
+                (acc, el) =>
+                  el.discount ? el.price - (el.price * el.discount) / 100 : acc,
+                0,
+              )}
+            </span>
+          </div>
+          <div className="cart-page__applycation">
+            <label
+              className="cart-page__input-wrapper"
+              htmlFor="cart-page-input"
+            >
+              <svg
+                width="21"
+                height="21"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M23.0766 12.4856L13.7653 3.17438C13.5917 2.99963 13.3851 2.86109 13.1576 2.76679C12.93 2.67248 12.686 2.62429 12.4397 2.62501H3.75001C3.45164 2.62501 3.16549 2.74353 2.95451 2.95451C2.74353 3.16549 2.62501 3.45164 2.62501 3.75001V12.4397C2.62429 12.686 2.67248 12.93 2.76679 13.1576C2.86109 13.3851 2.99963 13.5917 3.17438 13.7653L12.4856 23.0766C12.8372 23.4281 13.3141 23.6255 13.8113 23.6255C14.3084 23.6255 14.7853 23.4281 15.1369 23.0766L23.0766 15.1369C23.4281 14.7853 23.6255 14.3084 23.6255 13.8113C23.6255 13.3141 23.4281 12.8372 23.0766 12.4856ZM13.8113 21.2203L4.87501 12.2813V4.87501H12.2813L21.2175 13.8113L13.8113 21.2203ZM9.37501 7.87501C9.37501 8.17168 9.28703 8.46169 9.12221 8.70836C8.95739 8.95504 8.72312 9.1473 8.44903 9.26083C8.17494 9.37436 7.87334 9.40406 7.58237 9.34619C7.2914 9.28831 7.02413 9.14545 6.81435 8.93567C6.60457 8.72589 6.46171 8.45861 6.40383 8.16764C6.34595 7.87667 6.37566 7.57507 6.48919 7.30098C6.60272 7.02689 6.79498 6.79263 7.04165 6.6278C7.28833 6.46298 7.57834 6.37501 7.87501 6.37501C8.27283 6.37501 8.65436 6.53304 8.93567 6.81435C9.21697 7.09565 9.37501 7.47718 9.37501 7.87501Z"
+                  fill="black"
+                  fill-opacity="0.4"
+                />
+              </svg>
+              <input
+                id="cart-page-input"
+                className="cart-page__input"
+                type="text"
+                placeholder="Add promo code"
+              />
+            </label>
+
+            <button className="cart-page__application-button">Apply</button>
+            
+          </div>
+          <button className="cart-page__checkout-button">Go to Checkout</button>
         </div>
       </div>
     </div>
