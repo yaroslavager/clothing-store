@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import ProductPrice from "../../shared/ui/productPrice/productPrice";
 
 interface ProductGridProps {
-  products: Product[],
+  products: Product[] | [],
   title: string;
   filter?: (product: Product) => boolean;
   showCount?: boolean;
@@ -16,7 +16,7 @@ interface ProductGridProps {
 }
 
 function ProductGrid({
-  products,
+  products=[],
   title,
   filter,
   showCount = false,

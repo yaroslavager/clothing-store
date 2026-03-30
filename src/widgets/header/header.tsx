@@ -30,9 +30,9 @@ function Header() {
         <div className="header__menu">
 
           {/* Cart */}
-          <a href="#">
+          <Link to="/cart">
             <img className="header__icon" src="/cart.svg" alt="cart" />
-          </a>
+          </Link>
           {/* LogIn */}
 <AuthForm/>
      

@@ -1,5 +1,6 @@
 import "./productPage.scss";
 import { useParams } from "react-router-dom";
+import { useCartStore } from "../../entities/cart/model/cartStore";
 import { products } from "../../entities/product/model/products";
 import { colors } from "../../shared/config/colors";
 import ProductPrice from "../../shared/ui/productPrice/productPrice";
@@ -7,6 +8,7 @@ import ProductPrice from "../../shared/ui/productPrice/productPrice";
 import { useState } from "react";
 
 function ProductPage() {
+  const addItem= useCartStore((state)=>state.addItem)
   const [chosenSize, setSize] = useState<string | null>(null);
   const [count, setCount] = useState(0);
 
@@ -90,7 +92,8 @@ function ProductPage() {
             </button>{" "}
           </div>
 
-          <button className="product-page__button">Add to Cart</button>
+          <button className="product-page__button" onClick={()=>addItem(product)}>Add to Cart</button>
+          
         </div>
       </div>
     </div>
