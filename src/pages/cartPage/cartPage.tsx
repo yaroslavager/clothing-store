@@ -108,7 +108,6 @@ function CartPage() {
             </label>
 
             <button className="cart-page__application-button">Apply</button>
-            
           </div>
           <button className="cart-page__checkout-button">Go to Checkout</button>
         </div>

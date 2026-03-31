@@ -2,6 +2,8 @@ import Hero from "../../widgets/hero/hero";
 import BrandsBanner from "../../shared/ui/brandsBanner/brandsBanner";
 import ProductGrid from "../../widgets/productGrid/productGrid";
 import { products } from "../../entities/product/model/products";
+import ReviewsSlider from "../../shared/ui/reviewsSlider/reviewsSlider";
+
 
 function HomePage() {
   return (
@@ -27,6 +29,7 @@ function HomePage() {
         settings
         columns
       />
+      <ReviewsSlider />
     </>
   );
 }
