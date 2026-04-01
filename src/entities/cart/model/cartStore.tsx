@@ -36,7 +36,22 @@ export const useCartStore = create((set) => ({
       }
       return { cartItems: [...state.cartItems, { ...product, count: 1 }] };
     }),
+  deleteItem: (product)=>set((state)=>{
+const existing = state.cartItems.find(el=> el.id===product.id)
+if(existing){
+ if(existing.count >1){
+  return {
+    cartItems: state.cartItems.map(el=> el.id===product.id? {...el, count: el.count -1} : el )   }
+ }
+ else {
+return {cartItems:state.cartItems.filter(el=> el.id!==product.id)}
+
+ }
+
+}
+
+  }),
   // deleteItem: (product)=>set((state)=>{
 
-  // }),
+  // }), 
 }));

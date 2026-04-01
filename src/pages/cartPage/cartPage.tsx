@@ -1,8 +1,11 @@
 import "./cartPage.scss";
 import { useCartStore } from "../../entities/cart/model/cartStore";
 
+
 function CartPage() {
   const cartItems = useCartStore((state) => state.cartItems);
+  const deleteItem=useCartStore((state)=> state.deleteItem)
+  const addItem= useCartStore((state)=>state.addItem)
   console.log("Содержимое корзины:", cartItems);
   return (
     <div className="cart-page__main-wrapper container">
@@ -40,9 +43,13 @@ function CartPage() {
                   </svg>
                 </button>
                 <div className="cart-page__count">
-                  <button className="cart-page__count-button">-</button>
-                  <span>0</span>{" "}
-                  <button className="cart-page__count-button">+</button>
+                  <button className="cart-page__count-button" 
+                  onClick= {()=>deleteItem(product)}
+                  >-</button>
+                  <span>{product.count}</span>{" "}
+                  <button className="cart-page__count-button"
+                  onClick={()=>addItem(product)}
+                  >+</button>
                 </div>
               </div>
             </div>
@@ -56,7 +63,7 @@ function CartPage() {
             <div className="cart-page__info-price">
               <p className="cart-page__info-price-title">Subtotal</p>
               <span className="cart-page__price">
-                ${cartItems.reduce((acc, el) => el.price + acc, 0)}
+                ${cartItems.reduce((acc, el) => (el.price*el.count )+ acc, 0)}
               </span>
             </div>
             <div className="cart-page__info-price">
@@ -76,7 +83,7 @@ function CartPage() {
             <span className="cart-page__price">
               {cartItems.reduce(
                 (acc, el) =>
-                  el.discount ? el.price - (el.price * el.discount) / 100 : acc,
+                  el.discount ? el.price - (el.price * el.discount) / 100 : el.price,
                 0,
               )}
             </span>
