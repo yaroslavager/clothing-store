@@ -1,13 +1,17 @@
-import "./cartPage.scss";
+import { useEffect } from "react";
 import { useCartStore } from "../../entities/cart/model/cartStore";
-
+import "./cartPage.scss";
 
 function CartPage() {
   const cartItems = useCartStore((state) => state.cartItems);
   const deleteItem=useCartStore((state)=> state.deleteItem)
   const addItem= useCartStore((state)=>state.addItem)
   console.log("Содержимое корзины:", cartItems);
+  useEffect(()=>{
+document.title=`Cart | Shop.CO`
+  },[])
   return (
+<>
     <div className="cart-page__main-wrapper container">
       <h1 className="cart-page__title">YOUR CART</h1>
       <div className="cart-page__order-wrapper">
@@ -120,6 +124,7 @@ function CartPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 export default CartPage;

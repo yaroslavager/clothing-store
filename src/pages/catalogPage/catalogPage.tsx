@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useEffect } from "react";
 import "./catalogPage.scss";
 import { products } from "../../entities/product/model/products";
 import Filters from "../../widgets/filters/filters";
@@ -13,8 +14,13 @@ function CatalogPage() {
   const fFiltersIsOpen = () => {
     setFiltersIsOpen(!filtersIsOpen);
   };
+useEffect(()=>{
+document.title=`Catalog | Shop.CO`
+},[])
 
   return (
+    <>
+    
     <main className="catalog-page__wrapper container">
       <Filters
         price={price}
@@ -32,6 +38,7 @@ function CatalogPage() {
        showCount
         filtersIsOpen={fFiltersIsOpen} />
     </main>
+     </>
   );
 }
 
