@@ -9,6 +9,7 @@ interface ProductGridProps {
   filter?: (product: Product) => boolean;
   showCount?: boolean;
   showButton?: boolean;
+  path: string | null,
   limit?: number;
   settings?: boolean;
   columns?: boolean;
@@ -21,6 +22,7 @@ function ProductGrid({
   filter,
   showCount = false,
   showButton = false,
+  path,
   limit,
   settings = false,
   columns = false,
@@ -85,7 +87,13 @@ function ProductGrid({
           </Link>
         ))}
       </div>
-      {showButton && <button className="product-grid__button">View All</button>}
+      {showButton && 
+<Link to={`${path}`}>
+      <button
+      // onClick={}
+       className="product-grid__button">View All</button>
+       </Link>
+       }
     </section>
   );
 }

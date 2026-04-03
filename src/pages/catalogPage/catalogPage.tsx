@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useEffect } from "react";
+import { useSearchParams} from "react-router-dom";
 import "./catalogPage.scss";
 import { products } from "../../entities/product/model/products";
 import Filters from "../../widgets/filters/filters";
@@ -14,9 +15,28 @@ function CatalogPage() {
   const fFiltersIsOpen = () => {
     setFiltersIsOpen(!filtersIsOpen);
   };
+
 useEffect(()=>{
 document.title=`Catalog | Shop.CO`
-},[])
+},[]);
+
+const [searchParams]=useSearchParams()
+const filterParam=searchParams.get(`filter`)
+const categoryParam= searchParams.get(`category`)
+
+const filteredParam=products.filter((product)=>{
+  if(!filterParam) return true
+  if(filterParam==="new"){
+return product.date ==="new"
+  }
+else if(filterParam==="top"){
+return product.reviews?.total>4
+}
+else {
+  return product.category === categoryParam } 
+  // ИСПРАВИТЬ ПАРАМЕТРЫ!!
+})
+
 
   return (
     <>
@@ -33,7 +53,7 @@ document.title=`Catalog | Shop.CO`
         filtersIsOpen={fFiltersIsOpen}
       />
       <ProductGrid 
-      products={products}
+      products={filteredParam}
       title="Casual"
        showCount
         filtersIsOpen={fFiltersIsOpen} />
