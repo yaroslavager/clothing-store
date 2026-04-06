@@ -8,11 +8,11 @@ export const navLinks: NavLink[]= [
   {
     title: "Shop",
     children: [
-      { title: "Man", link: "#" },
-      { title: "Women", link: "#" },
+      { title: "Men", link: "/catalog?sex=men"},
+      { title: "Women", link: "/catalog?sex=women" },
     ],
   },
-  { title: "On Sale", link: "#" },
-  { title: "New Arrivals", link: "#" },
+  { title: "On Sale", link: "/catalog?sale=discount" },
+  { title: "New Arrivals", link: "/catalog?arrival=new" },
   { title: "Brands", link: "#" },
 ];

@@ -35,7 +35,7 @@ export const products: Product[] = [
   {
     id: 1,
     name: "T-shirt with Tape Details",
-    category: "T-shirt",
+    category: "T-shirts",
     sex: "men",
     style: "casual",
     color: ["black"],
@@ -75,7 +75,7 @@ export const products: Product[] = [
   {
     id: 3,
     name: "Checkered Shirt",
-    category: "Shirt",
+    category: "Shirts",
     sex: "men",
     style: "casual",
     color: ["pink"],
@@ -96,7 +96,7 @@ export const products: Product[] = [
   {
     id: 4,
     name: "Sleeve Striped T-shirt",
-    category: "T-shirt",
+    category: "T-shirts",
     sex: "men",
     style: "casual",
     color: ["orange"],
@@ -116,7 +116,7 @@ export const products: Product[] = [
   {
     id: 5,
     name: "Vertical Striped Shirt",
-    category: "Shirt",
+    category: "Shirts",
     sex: "men",
     style: "formal",
     color: ["green"],
@@ -137,7 +137,7 @@ export const products: Product[] = [
   {
     id: 6,
     name: "Courage Graphic T-shirt",
-    category: "T-shirt",
+    category: "T-shirts",
     sex: "men",
     style: "casual",
     color: ["orange"],
@@ -199,7 +199,7 @@ export const products: Product[] = [
   {
     id: 9,
     name: "One Life Graphic T-shirt",
-    category: "T-shirt",
+    category: "T-shirts",
     sex: "men",
     style: "party",
     color: ["green"],
@@ -220,7 +220,7 @@ export const products: Product[] = [
   {
     id: 10,
     name: "Polo with Contrast Trims",
-    category: "T-shirt",
+    category: "T-shirts",
     sex: "men",
     style: "casual",
     color: ["dark blue"],
@@ -241,7 +241,7 @@ export const products: Product[] = [
   {
     id: 11,
     name: "Gradient Graphic T-shirt",
-    category: "T-shirt",
+    category: "T-shirts",
     sex: "men",
     style: "casual",
     color: ["white"],
@@ -262,7 +262,7 @@ export const products: Product[] = [
   {
     id: 12,
     name: "Polo with Tipping Details",
-    category: "T-shirt",
+    category: "T-shirts",
     sex: "men",
     style: "casual",
     color: ["pink"],
@@ -283,7 +283,7 @@ export const products: Product[] = [
   {
     id: 13,
     name: "Black Striped T-shirt",
-    category: "T-shirt",
+    category: "T-shirts",
     sex: "men",
     style: "sport",
     color: ["black"],

@@ -1,10 +1,13 @@
+import { Link } from "react-router-dom";
 import "./filters.scss";
+
 // import { Link } from "react-router-dom";
 import { category } from "../../shared/config/category";
 import { dressStyle } from "../../shared/config/dressStyle";
 import PriceSlider from "./ui/priceSlider/priceSlider";
 import ColorFilter from "./ui/colorFilter/colorFilter";
 import SizeFilter from "./ui/sizeFilter/sizeFilter";
+
 
 interface FilterProps {
   price: number[];
@@ -13,11 +16,9 @@ interface FilterProps {
   setColor: (id: number) => void;
   chosenSize: string | null;
   setSize: (size: string | null) => void;
-  isOpen: boolean ;
-   filtersIsOpen: ()=>void
+  isOpen: boolean;
+  filtersIsOpen: () => void;
 }
-
-
 
 function Filters({
   price,
@@ -27,16 +28,17 @@ function Filters({
   chosenSize,
   setSize,
   isOpen,
-   filtersIsOpen
+  filtersIsOpen,
 }: FilterProps) {
-
-
   return (
-    <aside className= {`filters__wrapper ${isOpen? "filters__wrapper--open" : ""}` }>
+    <aside
+      className={`filters__wrapper ${isOpen ? "filters__wrapper--open" : ""}`}
+    >
       <div className="filters__header">
         <p className="filters__main-title">Filters</p>
-        <svg className="filters__main-icon"
-        onClick={ filtersIsOpen}
+        <svg
+          className="filters__main-icon"
+          onClick={filtersIsOpen}
           width="24"
           height="24"
           viewBox="0 0 24 24"
@@ -53,16 +55,28 @@ function Filters({
       <hr className="filters__border" />
 
       <div className="filters__category">
-{category.map(category=> (
-  <div className="filters__category-list" key={category}>{category}  
-<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1.28318 0.221294L6.28318 5.22129C6.3531 5.29097 6.40857 5.37377 6.44643 5.46493C6.48428 5.55609 6.50377 5.65383 6.50377 5.75254C6.50377 5.85126 6.48428 5.94899 6.44643 6.04016C6.40857 6.13132 6.3531 6.21412 6.28318 6.28379L1.28318 11.2838C1.14228 11.4247 0.951183 11.5038 0.751926 11.5038C0.552669 11.5038 0.361572 11.4247 0.220676 11.2838C0.0797797 11.1429 0.000625142 10.9518 0.000625142 10.7525C0.000625143 10.5533 0.0797797 10.3622 0.220676 10.2213L4.69005 5.75192L0.220051 1.28255C0.0791551 1.14165 1.25847e-07 0.950553 1.28223e-07 0.751295C1.30599e-07 0.552037 0.0791552 0.360941 0.220051 0.220045C0.360948 0.0791493 0.552044 -7.62281e-06 0.751301 -7.62044e-06C0.950559 -7.61806e-06 1.14166 0.0791493 1.28255 0.220045L1.28318 0.221294Z" fill="black" fill-opacity="0.6"/>
-</svg>
-</div>
-))
 
-}
-  
+        {category.map((item) => (
+          <div key={item} >
+            <Link to={item.link} className="filters__category-list"   >
+            {item.category}
+            <svg
+              width="7"
+              height="12"
+              viewBox="0 0 7 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.28318 0.221294L6.28318 5.22129C6.3531 5.29097 6.40857 5.37377 6.44643 5.46493C6.48428 5.55609 6.50377 5.65383 6.50377 5.75254C6.50377 5.85126 6.48428 5.94899 6.44643 6.04016C6.40857 6.13132 6.3531 6.21412 6.28318 6.28379L1.28318 11.2838C1.14228 11.4247 0.951183 11.5038 0.751926 11.5038C0.552669 11.5038 0.361572 11.4247 0.220676 11.2838C0.0797797 11.1429 0.000625142 10.9518 0.000625142 10.7525C0.000625143 10.5533 0.0797797 10.3622 0.220676 10.2213L4.69005 5.75192L0.220051 1.28255C0.0791551 1.14165 1.25847e-07 0.950553 1.28223e-07 0.751295C1.30599e-07 0.552037 0.0791552 0.360941 0.220051 0.220045C0.360948 0.0791493 0.552044 -7.62281e-06 0.751301 -7.62044e-06C0.950559 -7.61806e-06 1.14166 0.0791493 1.28255 0.220045L1.28318 0.221294Z"
+                fill="black"
+                fill-opacity="0.6"
+              />
+            </svg>
+</Link>
+
+          </div>
+        ))}
       </div>
 
       <hr className="filters__border" />
@@ -81,14 +95,23 @@ function Filters({
 
       <fieldset className="filters__dress-style">
         <legend className="filters__title">Dress Style</legend>
-        {dressStyle.map(style=>(
-<div className="filters__dress-style-list">
-  {style}  <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1.28318 0.221294L6.28318 5.22129C6.3531 5.29097 6.40857 5.37377 6.44643 5.46493C6.48428 5.55609 6.50377 5.65383 6.50377 5.75254C6.50377 5.85126 6.48428 5.94899 6.44643 6.04016C6.40857 6.13132 6.3531 6.21412 6.28318 6.28379L1.28318 11.2838C1.14228 11.4247 0.951183 11.5038 0.751926 11.5038C0.552669 11.5038 0.361572 11.4247 0.220676 11.2838C0.0797797 11.1429 0.000625142 10.9518 0.000625142 10.7525C0.000625143 10.5533 0.0797797 10.3622 0.220676 10.2213L4.69005 5.75192L0.220051 1.28255C0.0791551 1.14165 1.25847e-07 0.950553 1.28223e-07 0.751295C1.30599e-07 0.552037 0.0791552 0.360941 0.220051 0.220045C0.360948 0.0791493 0.552044 -7.62281e-06 0.751301 -7.62044e-06C0.950559 -7.61806e-06 1.14166 0.0791493 1.28255 0.220045L1.28318 0.221294Z" fill="black" fill-opacity="0.6"/>
-</svg>
-
-</div>
-
+        {dressStyle.map((style) => (
+          <div className="filters__dress-style-list">
+            {style}{" "}
+            <svg
+              width="7"
+              height="12"
+              viewBox="0 0 7 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.28318 0.221294L6.28318 5.22129C6.3531 5.29097 6.40857 5.37377 6.44643 5.46493C6.48428 5.55609 6.50377 5.65383 6.50377 5.75254C6.50377 5.85126 6.48428 5.94899 6.44643 6.04016C6.40857 6.13132 6.3531 6.21412 6.28318 6.28379L1.28318 11.2838C1.14228 11.4247 0.951183 11.5038 0.751926 11.5038C0.552669 11.5038 0.361572 11.4247 0.220676 11.2838C0.0797797 11.1429 0.000625142 10.9518 0.000625142 10.7525C0.000625143 10.5533 0.0797797 10.3622 0.220676 10.2213L4.69005 5.75192L0.220051 1.28255C0.0791551 1.14165 1.25847e-07 0.950553 1.28223e-07 0.751295C1.30599e-07 0.552037 0.0791552 0.360941 0.220051 0.220045C0.360948 0.0791493 0.552044 -7.62281e-06 0.751301 -7.62044e-06C0.950559 -7.61806e-06 1.14166 0.0791493 1.28255 0.220045L1.28318 0.221294Z"
+                fill="black"
+                fill-opacity="0.6"
+              />
+            </svg>
+          </div>
         ))}
       </fieldset>
 

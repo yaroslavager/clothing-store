@@ -1,11 +1,10 @@
 import "./header.scss";
 import { Link } from "react-router-dom";
-// import { navLinks } from "../../shared/config/navLinks";
 import BurgerMenu from "../../shared/ui/burgerMenu/burgerMenu";
 import Navigation from "./ui/navigation"
 import Search from "../../features/search/search";
 import AuthForm from "../../features/authForm/authForm";
-// import ShopMenu from "../BurgerMenu/ShopMenu/ShopMenu"
+
 
 function Header() {
   return (

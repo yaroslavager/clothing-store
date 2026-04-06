@@ -16,7 +16,7 @@ function HomePage() {
         filter={(product) => product.date === "new"}
         limit={4}
         showButton
-        path="/catalog?filter=new"
+        path="/catalog?arrival=new"
         settings
         columns
       />
@@ -27,7 +27,7 @@ function HomePage() {
         filter={(product) => product.reviews?.total > 4}
         limit={4}
         showButton
- path="/catalog?filter=top"
+ path="/catalog?review=top"
         settings
         columns
       />

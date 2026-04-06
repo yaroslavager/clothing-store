@@ -30,6 +30,8 @@ function ProductGrid({
 }: ProductGridProps) {
   const filtred = filter ? products.filter(filter) : products;
   const displayed = limit ? filtred.slice(0, limit) : filtred;
+
+ 
   return (
     <section className="product-grid container">
       <div
@@ -62,6 +64,12 @@ function ProductGrid({
       <div
         className={`product-grid__wrapper ${columns ? "product-grid__columns" : ""}`}
       >
+
+
+
+{displayed.length>0?(<>
+
+
         {displayed.map((product) => (
           <Link key={product.id} to={`/product/${product.id}`}>
             <div  className="product-grid__product">
@@ -86,6 +94,14 @@ function ProductGrid({
             </div>
           </Link>
         ))}
+       </>) : (  <> <p className="product-grid__title--notfound">Products are not available</p></>)
+     
+}
+
+
+
+
+
       </div>
       {showButton && 
 <Link to={`${path}`}>

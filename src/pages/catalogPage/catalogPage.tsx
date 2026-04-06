@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useEffect } from "react";
-import { useSearchParams} from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import "./catalogPage.scss";
 import { products } from "../../entities/product/model/products";
 import Filters from "../../widgets/filters/filters";
@@ -16,49 +16,84 @@ function CatalogPage() {
     setFiltersIsOpen(!filtersIsOpen);
   };
 
-useEffect(()=>{
-document.title=`Catalog | Shop.CO`
-},[]);
+  useEffect(() => {
+    document.title = `Catalog | Shop.CO`;
+  }, []);
 
-const [searchParams]=useSearchParams()
-const filterParam=searchParams.get(`filter`)
-const categoryParam= searchParams.get(`category`)
+  const [searchParams] = useSearchParams();
+ 
+ 
 
-const filteredParam=products.filter((product)=>{
-  if(!filterParam) return true
-  if(filterParam==="new"){
-return product.date ==="new"
-  }
-else if(filterParam==="top"){
-return product.reviews?.total>4
-}
-else {
-  return product.category === categoryParam } 
-  // ИСПРАВИТЬ ПАРАМЕТРЫ!!
-})
+  const arrivalsParam = searchParams.get(`arrival`);
+  const reviewFilter = searchParams.get(`review`);
+  const categoryParam = searchParams.get(`category`);
+  const sexParam = searchParams.get(`sex`);
+  const colorParam = searchParams.get(`color`);
+  const sizeParam = searchParams.get(`size`);
+  const styleParam = searchParams.get(`style`);
+  const discountParam = searchParams.get(`sale`);
+
+  const filteredParam = products.filter((product) => {
+    if (arrivalsParam === "new" && product.date !== arrivalsParam) {
+      return false;
+    }
+    if (reviewFilter === "top" && (product.reviews?.total || 0) < 4) {
+      return false;
+    }
+    if (categoryParam && product.category.toLowerCase() !== categoryParam) {
+      return false;
+    }
+    if (sexParam && product.sex !== sexParam) {
+      return false;
+    }
+    if (colorParam && product.color !== colorParam) {
+      return false;
+    }
+    if (sizeParam && product.size !== sizeParam) {
+      return false;
+    }
+    if (styleParam && product.style !== styleParam) {
+      return false;
+    }
+    if (discountParam === "discount" && !product.discount) {
+      return false;
+    }
+    return true;
+  });
+
+ const getTitle=()=>{
+if(categoryParam) return categoryParam;
+if(styleParam) return styleParam;
+if(sexParam) return sexParam;
+if(discountParam) return discountParam
+if(arrivalsParam) return arrivalsParam
+return "casual"
+ }
 
 
   return (
     <>
-    
-    <main className="catalog-page__wrapper container">
-      <Filters
-        price={price}
-        setPrice={setPrice}
-        colorId={colorId}
-        setColor={setColor}
-        chosenSize={chosenSize}
-        setSize={setSize}
-        isOpen={filtersIsOpen}
-        filtersIsOpen={fFiltersIsOpen}
-      />
-      <ProductGrid 
-      products={filteredParam}
-      title="Casual"
-       showCount
-        filtersIsOpen={fFiltersIsOpen} />
-    </main>
-     </>
+      <main className="catalog-page__wrapper container">
+        <Filters
+          price={price}
+          setPrice={setPrice}
+          colorId={colorId}
+          setColor={setColor}
+          chosenSize={chosenSize}
+          setSize={setSize}
+          isOpen={filtersIsOpen}
+          filtersIsOpen={fFiltersIsOpen}
+        />
+        
+        <ProductGrid
+          products={filteredParam}
+          title={getTitle()}
+          showCount
+          filtersIsOpen={fFiltersIsOpen}
+        />
+        
+      </main>
+    </>
   );
 }
 
