@@ -6,7 +6,7 @@ import { reviews } from "../../config/reviews"
 function ReviewsSlider(){
     return(
         <div className="reviews-slider"> 
-        <div className="reviews-slider__slider"> <p className="reviews-slider__title">OUR HAPPY CUSTOMERS</p> <img src="#" alt="" /></div>
+        <div className="reviews-slider__slider"> <h2 className="reviews-slider__title">OUR HAPPY CUSTOMERS</h2> <img src="#" alt="" /></div>
         <div className="reviews-slider__wrapper">
           
             {reviews.map(review=>(

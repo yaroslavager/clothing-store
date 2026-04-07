@@ -3,6 +3,7 @@ import BrandsBanner from "../../shared/ui/brandsBanner/brandsBanner";
 import ProductGrid from "../../widgets/productGrid/productGrid";
 import { products } from "../../entities/product/model/products";
 import ReviewsSlider from "../../shared/ui/reviewsSlider/reviewsSlider";
+import BrowsByStyle from "../../widgets/browseByStyle/browseByStyle";
 
 
 function HomePage() {
@@ -31,6 +32,7 @@ function HomePage() {
         settings
         columns
       />
+      <BrowsByStyle />
       <ReviewsSlider />
     </>
   );

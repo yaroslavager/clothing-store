@@ -25,19 +25,20 @@ function CatalogPage() {
  
 
   const arrivalsParam = searchParams.get(`arrival`);
-  const reviewFilter = searchParams.get(`review`);
+  const reviewParam = searchParams.get(`review`);
   const categoryParam = searchParams.get(`category`);
   const sexParam = searchParams.get(`sex`);
   const colorParam = searchParams.get(`color`);
   const sizeParam = searchParams.get(`size`);
   const styleParam = searchParams.get(`style`);
   const discountParam = searchParams.get(`sale`);
+  //STYLES
 
   const filteredParam = products.filter((product) => {
     if (arrivalsParam === "new" && product.date !== arrivalsParam) {
       return false;
     }
-    if (reviewFilter === "top" && (product.reviews?.total || 0) < 4) {
+    if (reviewParam === "top" && (product.reviews?.total || 0) < 4) {
       return false;
     }
     if (categoryParam && product.category.toLowerCase() !== categoryParam) {

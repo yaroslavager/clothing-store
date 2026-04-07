@@ -37,7 +37,7 @@ function ProductGrid({
       <div
         className={`product-grid__head ${settings ? "product-grid__head--settings" : ""}`}
       >
-        <p className="product-grid__title">{title}</p>
+        <h2 className="product-grid__title">{title}</h2>
         <p className="product-grid__product-title">
           {showCount && `Showing 1-10 of ${products.length} Products`}
         </p>

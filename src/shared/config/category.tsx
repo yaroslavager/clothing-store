@@ -1,4 +1,9 @@
-export const category = [
+export interface Category{
+    category: string,
+    link: string
+}
+
+export const category: Category[] = [
 {category:"T-shirts" , link:"/catalog?category=t-shirts" },
 {category: "Shorts", link: "/catalog?category=shorts"},
 {category:"Shirts" , link:  "/catalog?category=shirts"},
