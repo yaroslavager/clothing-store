@@ -1,17 +1,32 @@
 .reviews-slider{
+    padding-top: 80px;
     &__wrapper{
         width: auto;
         display: flex;
         gap: 20px;
     overflow-y: auto;
     margin-bottom: 170px;
+  
     }
     &__slider{
         display: flex;
         justify-content: space-between;
+        align-items: center;
         margin-bottom: 40px;
+        padding: 0 1rem;
     }
     &__title{
       
     }
+    &__slider-wrapper{
+        display: flex;
+        gap: 16px;
+
+    }
+    &__buttons{
+        cursor: pointer;
+      background-color: transparent;
+        border: none;
+    }
+
 }

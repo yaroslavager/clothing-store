@@ -2,27 +2,33 @@
   &__wrapper {
     width: 100%;
     background-color: var(--color-bg-third);
-    // height: 499px;
+   
   }
   &__wrap {
     padding: 1rem;
+    position: relative;
+    padding-top: 140px;
   }
   &__subscription {
-    // visibility: hidden;
+    
+    position: absolute;
+  
+  top: 0;
+  transform: translateY(-50%);
+  left: 1rem;   
+  right: 1rem;
     background-color: var(--color-text-primary);
     border-radius: var(--br-cart);
-    max-width: 1240px;
+    width: auto;
+    // max-width: 1240px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     padding: 2.5rem 1rem;
   }
-  &__h6 {
+  &__title {
     color: var(--color-text-highlight);
-    font-size: var(--fs-xl);
-    font-family: var(--font-primary);
-    font-weight: 900;
-    margin: 0;
+   
   }
   &__data-wraper {
     display: flex;

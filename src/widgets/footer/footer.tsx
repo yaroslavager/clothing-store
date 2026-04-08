@@ -6,9 +6,9 @@ function Footer() {
     <div className="footer__wrapper">
       <div className="footer__wrap container">
         <div className="footer__subscription">
-          <h6 className="footer__h6">
+          <h2 className="footer__title">
             STAY UPTO DATE ABOUT <br /> OUR LATEST OFFERS
-          </h6>
+          </h2>
           <div className="footer__data-wraper">
             <label htmlFor="footer-email">
               <input

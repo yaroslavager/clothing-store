@@ -1,4 +1,7 @@
 .browse-by-style {
+  &__padding{
+    // padding: 0 1rem;
+  }
   &__wrapper {
     background-color: var(--color-bg-secondary);
     border-radius: var(--br-wrappers);
@@ -6,6 +9,7 @@
     flex-direction: column;
     align-items: center;
     padding: 4.4rem 4rem;
+  
   }
   &__title {
     padding-bottom: 4rem;
