@@ -8,8 +8,8 @@ export interface Style{
 }
 
 export const dressStyles : Style[]=[
-{title:"Casual" , img: "", link: "/catalog?style=casual", size: "small"},
-{title:"Formal" , img: "", link: "/catalog?style=formal", size:"big"},
-{title:"Party" , img: "", link: "/catalog?style=party", size: "big"}, 
-{title:"Gym" , img: "", link: "/catalog?style=gym", size: "small"}
+{title:"Casual" , img: "/imgs/styles/id1.jpg", link: "/catalog?style=casual", size: "small"},
+{title:"Formal" , img: "/imgs/styles/id2.jpg", link: "/catalog?style=formal", size:"big"},
+{title:"Party" , img: "/imgs/styles/id3.jpg", link: "/catalog?style=party", size: "big"}, 
+{title:"Gym" , img: "/imgs/styles/id4.jpg", link: "/catalog?style=gym", size: "small"}
 ]

@@ -8,9 +8,9 @@ function BrowsByStyle() {
       <h2 className="browse-by-style__title">BROWSE BY DRESS STYLE</h2>
       <div className="browse-by-style__grid">
         {dressStyles.map(style=>(
-           <Link className={`browse-by-style__item browse-by__item--size-${style.size}`} key={style.title} to={style.link}>
-            <p>{style.title}</p>
-            <img src={style.img} />
+           <Link className={`browse-by-style__item browse-by-style__item--size-${style.size}`} key={style.title} to={style.link}>
+            <p className="browse-by-style__style-title">{style.title}</p>
+            <img className="browse-by-style__imgs" src={style.img} />
             </Link> 
         ))
 
