@@ -26,16 +26,15 @@ document.title=`Cart | Shop.CO`
                 />
                 <div>
                   <h3 className="cart-page__product-title">{product.name}</h3>
-                  <p>Size: {product.size}</p>
-                  <p>Color: {product.color}</p>
-                  <span>${product.price}</span>
+                  <p className="cart-page__product-description">Size: {product.size}</p>
+                  <p className="cart-page__product-description">Color: {product.color}</p>
+                  <span className="cart-page__price cart-page__price--padding">${product.price}</span>
                 </div>
               </div>
               <div className="cart-page__product-buttons">
                 <button className="cart-page__delete-button">
                   <svg
-                    width="18"
-                    height="20"
+                   
                     viewBox="0 0 18 20"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"

@@ -8,7 +8,7 @@ export interface Product {
   size: ("xs" | "s" | "m" | "l" | "xl")[];
   description: string;
   date: "new" | "old";
-  img: string;
+  img: string | string[];
   reviews?: {
     stars: string;
     total: number;
@@ -29,7 +29,12 @@ export const products: Product[] = [
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "new",
-    img: "/imgs/products/id1.jpg",
+    img: [
+      "/imgs/products/id1.jpg",
+      "/imgs/products/id1-1.jpg",
+      "/imgs/products/id1-2.jpg",
+      "/imgs/products/id1-3.jpg",
+    ],
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id1.svg",
       total: 4.5,
@@ -49,7 +54,12 @@ export const products: Product[] = [
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "new",
-    img: "/imgs/products/id2.jpg",
+    img: [
+      "/imgs/products/id2.jpg",
+      "/imgs/products/id2-1.jpg",
+      "/imgs/products/id2-2.jpg",
+      "/imgs/products/id2-3.jpg",
+    ],
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id2.svg",
       total: 3.5,
@@ -69,7 +79,7 @@ export const products: Product[] = [
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "new",
-    img: "/imgs/products/id3.jpg",
+    img: ["/imgs/products/id3.jpg", "/imgs/products/id3-1.jpg", "/imgs/products/id3-2.jpg", "/imgs/products/id3-3.jpg"],
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id3.svg",
       total: 4.5,
@@ -90,7 +100,7 @@ export const products: Product[] = [
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "new",
-    img: "/imgs/products/id4.jpg",
+    img: ["/imgs/products/id4.jpg", "/imgs/products/id4-1.jpg", "/imgs/products/id4-2.jpg", "/imgs/products/id4-3.jpg"],
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id4.svg ",
       total: 4.5,
@@ -110,7 +120,7 @@ export const products: Product[] = [
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "old",
-    img: "/imgs/products/id5.jpg",
+    img: ["/imgs/products/id5.jpg", "/imgs/products/id5-1.jpg", "/imgs/products/id5-2.jpg", "/imgs/products/id5-3.jpg"],
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id5.svg",
       total: 5.0,
@@ -131,7 +141,7 @@ export const products: Product[] = [
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "old",
-    img: "/imgs/products/id6.jpg",
+    img: ["/imgs/products/id6.jpg", "/imgs/products/id6-1.jpg", "/imgs/products/id6-2.jpg", "/imgs/products/id6-3.jpg"],
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id6.svg",
       total: 4.0,
@@ -145,14 +155,14 @@ export const products: Product[] = [
     id: 7,
     name: "Loose Fit Bermuda Shorts",
     category: "Shorts",
-    sex: "men",
+    sex: "women",
     style: "casual",
     color: ["light blue"],
     size: ["xs", "s"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "new",
-    img: "/imgs/products/id7.jpg",
+    img: ["/imgs/products/id7.jpg"],
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id7.svg",
       total: 3.0,
@@ -173,7 +183,7 @@ export const products: Product[] = [
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "old",
-    img: "/imgs/products/id8.jpg",
+    img: ["/imgs/products/id8.jpg"],
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id8.svg",
       total: 4.5,
@@ -193,7 +203,7 @@ export const products: Product[] = [
     description:
       " This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style. ",
     date: "new",
-    img: "/imgs/products/id9.jpg",
+    img: ["/imgs/products/id9.jpg"],
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id9.svg",
       total: 4.5,
@@ -214,7 +224,7 @@ export const products: Product[] = [
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "old",
-    img: "/imgs/products/id10.jpg",
+    img: ["/imgs/products/id10.jpg"],
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id10.svg",
       total: 4.0,
@@ -235,7 +245,7 @@ export const products: Product[] = [
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "new",
-    img: "/imgs/products/id11.jpg",
+    img: ["/imgs/products/id11.jpg"],
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id11.svg",
       total: 3.5,
@@ -256,7 +266,7 @@ export const products: Product[] = [
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "old",
-    img: "/imgs/products/id12.jpg",
+    img: ["/imgs/products/id12.jpg"],
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id12.svg",
       total: 4.5,
@@ -277,7 +287,7 @@ export const products: Product[] = [
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "old",
-    img: "/imgs/products/id13.jpg",
+    img: ["/imgs/products/id13.jpg"],
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id13.svg",
       total: 5.0,

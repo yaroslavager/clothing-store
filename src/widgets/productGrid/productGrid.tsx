@@ -73,7 +73,7 @@ function ProductGrid({
         {displayed.map((product) => (
           <Link key={product.id} to={`/product/${product.id}`}>
             <div  className="product-grid__product">
-              <img className="product-grid__img" src={product.img} alt="" />
+              <img className="product-grid__img" src={product.img[0]} alt="" />
               <div className="product-grid__product-info">
                 <p className="product-grid__product-name">{product.name}</p>
                 {/* звезды */}
