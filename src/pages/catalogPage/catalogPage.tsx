@@ -84,6 +84,7 @@ return "casual"
           setSize={setSize}
           isOpen={filtersIsOpen}
           filtersIsOpen={fFiltersIsOpen}
+  
         />
         
         <ProductGrid
@@ -91,6 +92,7 @@ return "casual"
           title={getTitle()}
           showCount
           filtersIsOpen={fFiltersIsOpen}
+          filtersButtonIs={true}
         />
         
       </main>

@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { products } from "../../product/model/products";
+import { persist } from "zustand/middleware";
 
 export interface CartItem {
   id: number;
@@ -11,10 +11,14 @@ export interface CartItem {
   img: string;
 }
 
-export const useCartStore = create((set) => ({
+export const useCartStore = create(
+  
+  
+  persist(
+  (set) => ({
   cartItems: [],
 
-  addItem: (product) =>
+  addItem: (product, count) =>
     set((state) => {
       console.log("Добавляем в стор:", product);
       const existing = state.cartItems.find(
@@ -29,14 +33,14 @@ export const useCartStore = create((set) => ({
             return productInCart.id === product.id &&
               productInCart.size === product.size &&
               productInCart.color === product.color
-              ? { ...productInCart, count: productInCart.count + 1 }
+              ? { ...productInCart, count: productInCart.count + count }
               : productInCart;
           }),
         };
       }
-      return { cartItems: [...state.cartItems, { ...product, count: 1 }] };
+      return { cartItems: [...state.cartItems, { ...product, count }] };
     }),
-  deleteItem: (product)=>set((state)=>{
+  decrease: (product)=>set((state)=>{
 const existing = state.cartItems.find(el=> el.id===product.id)
 if(existing){
  if(existing.count >1){
@@ -51,7 +55,23 @@ return {cartItems:state.cartItems.filter(el=> el.id!==product.id)}
 }
 
   }),
+  
+deleteItem: (product)=> set((state)=>{
+return {cartItems: state.cartItems.filter(el=>el.id!==product.id) }
+
+})
+
   // deleteItem: (product)=>set((state)=>{
 
   // }), 
-}));
+
+
+
+
+
+}),
+{name: "cart-storage"}
+
+
+  )
+);

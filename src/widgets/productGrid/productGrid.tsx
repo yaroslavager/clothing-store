@@ -14,6 +14,7 @@ interface ProductGridProps {
   settings?: boolean;
   columns?: boolean;
   filtersIsOpen?: () => void;
+  filtersButtonIs: boolean
 }
 
 function ProductGrid({
@@ -27,6 +28,7 @@ function ProductGrid({
   settings = false,
   columns = false,
   filtersIsOpen,
+  filtersButtonIs
 }: ProductGridProps) {
   const filtred = filter ? products.filter(filter) : products;
   const displayed = limit ? filtred.slice(0, limit) : filtred;
@@ -42,9 +44,11 @@ function ProductGrid({
           {showCount && `Showing 1-10 of ${products.length} Products`}
         </p>
 
+
+{filtersButtonIs&&
         <button
           onClick={filtersIsOpen}
-          className="product-grid__filter-icon-wrapper"
+          className="product-grid__filter-icon-wrapper "
         >
           <svg
             className="product-grid__filters-icon"
@@ -60,6 +64,8 @@ function ProductGrid({
             />
           </svg>
         </button>
+}
+
       </div>
       <div
         className={`product-grid__wrapper ${columns ? "product-grid__columns" : ""}`}
@@ -106,7 +112,7 @@ function ProductGrid({
       {showButton && 
 <Link to={`${path}`}>
       <button
-      // onClick={}
+    
        className="product-grid__button">View All</button>
        </Link>
        }

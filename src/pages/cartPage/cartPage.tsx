@@ -4,8 +4,9 @@ import "./cartPage.scss";
 
 function CartPage() {
   const cartItems = useCartStore((state) => state.cartItems);
-  const deleteItem=useCartStore((state)=> state.deleteItem)
+  const decrease=useCartStore((state)=> state.decrease)
   const addItem= useCartStore((state)=>state.addItem)
+  const deleteItem=useCartStore((state)=>state.deleteItem)
   console.log("Содержимое корзины:", cartItems);
   useEffect(()=>{
 document.title=`Cart | Shop.CO`
@@ -16,12 +17,14 @@ document.title=`Cart | Shop.CO`
       <h1 className="cart-page__title">YOUR CART</h1>
       <div className="cart-page__order-wrapper">
         <div className="cart-page__products">
-          {cartItems.map((product) => (
+          {cartItems.length >0 ?(
+          
+          cartItems.map((product) => (
             <div key={product.id} className="cart-page__product-wrapper">
               <div className="cart-page__product-info">
                 <img
                   className="cart-page__img"
-                  src={product.img}
+                  src={product.img[0]}
                   alt="img of product"
                 />
                 <div>
@@ -32,7 +35,7 @@ document.title=`Cart | Shop.CO`
                 </div>
               </div>
               <div className="cart-page__product-buttons">
-                <button className="cart-page__delete-button">
+                <button onClick={()=>deleteItem(product)} className="cart-page__delete-button">
                   <svg
                    
                     viewBox="0 0 18 20"
@@ -47,16 +50,21 @@ document.title=`Cart | Shop.CO`
                 </button>
                 <div className="cart-page__count">
                   <button className="cart-page__count-button" 
-                  onClick= {()=>deleteItem(product)}
+                  onClick= {()=>decrease(product)}
                   >-</button>
                   <span>{product.count}</span>{" "}
                   <button className="cart-page__count-button"
-                  onClick={()=>addItem(product)}
+                  onClick={()=>addItem(product, 1)}
                   >+</button>
                 </div>
               </div>
             </div>
-          ))}
+          )
+        )
+          ) : ( <p className="cart-page__products--none">Your cart is empty</p> )
+
+
+      }
         </div>
 
         <div className="cart-page__info-wrapper">
@@ -84,9 +92,9 @@ document.title=`Cart | Shop.CO`
           <div className="cart-page__total-price">
             <p>Total</p>{" "}
             <span className="cart-page__price">
-              {cartItems.reduce(
+              ${cartItems.reduce(
                 (acc, el) =>
-                  el.discount ? el.price - (el.price * el.discount) / 100 : el.price,
+                  el.discount ? ((el.price - (el.price * el.discount) / 100)*el.count)+acc : (el.price*el.count)+acc,
                 0,
               )}
             </span>

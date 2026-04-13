@@ -117,7 +117,7 @@ function ProductPage() {
 
             <button
               className="product-page__button"
-              onClick={() => addItem(product)}
+              onClick={() => addItem(product, count)}
             >
               Add to Cart
             </button>

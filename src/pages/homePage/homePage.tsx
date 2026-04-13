@@ -20,6 +20,7 @@ function HomePage() {
         path="/catalog?arrival=new"
         settings
         columns
+        filtersButtonIs={false}
       />
 <hr className="container"/>
       <ProductGrid
@@ -31,6 +32,7 @@ function HomePage() {
  path="/catalog?review=top"
         settings
         columns
+         filtersButtonIs={false}
       />
       <BrowsByStyle />
       <ReviewsSlider />
