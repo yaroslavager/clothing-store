@@ -1,5 +1,8 @@
-import "./burgerMenu.scss";
 import { useState } from "react";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import "./burgerMenu.scss";
+
 import NavList from "../../ui/navList/navList";
 
 function BurgerMenu() {
@@ -7,6 +10,11 @@ function BurgerMenu() {
   const fVisibility = () => {
     setVisibility(!visibility);
   };
+const location=useLocation()
+useEffect(()=>{
+setVisibility(false)
+
+}, [location])
 
   return (
     <div className="burger-menu">
