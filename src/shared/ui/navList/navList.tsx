@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { navLinks } from "../../config/navLinks";
 import { Link } from "react-router-dom";
 interface NavListProps{
@@ -12,7 +14,11 @@ const toggle=()=>{
    console.log('toggle clicked!')
     setOpen(!isOpen)
 }
+const location = useLocation()
+useEffect(()=>{
+setOpen(false)
 
+}, [location])
     return(
 <ul className={`${Class}__list`}>
             {navLinks?.map((link, index) =>
