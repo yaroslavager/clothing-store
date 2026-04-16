@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import "./productGrid.scss";
 import { type Product } from "../../entities/product/model/products";
-import { Link } from "react-router-dom";
+
 import ProductPrice from "../../shared/ui/productPrice/productPrice";
 
 interface ProductGridProps {

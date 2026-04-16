@@ -29,7 +29,7 @@ document.title=`Cart | Shop.CO`
                 />
                 <div>
                   <h3 className="cart-page__product-title">{product.name}</h3>
-                  <p className="cart-page__product-description">Size: {product.size}</p>
+                  <p className="cart-page__product-description">Size: {product.chosenSize}</p>
                   <p className="cart-page__product-description">Color: {product.color}</p>
                   <span className="cart-page__price cart-page__price--padding">${product.price}</span>
                 </div>

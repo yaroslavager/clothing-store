@@ -18,37 +18,39 @@ export const useCartStore = create(
   (set) => ({
   cartItems: [],
 
-  addItem: (product, count) =>
+  addItem: (product, count, chosenSize) =>
     set((state) => {
       console.log("Добавляем в стор:", product);
+      const sizeToCompare= chosenSize || product.chosenSize
       const existing = state.cartItems.find(
         (productInCart) =>
           productInCart.id === product.id &&
-          productInCart.size === product.size &&
-          productInCart.color === product.color,
+          productInCart.chosenSize === sizeToCompare 
+          //&& productInCart.color === product.color,
       );
       if (existing) {
         return {
           cartItems: state.cartItems.map((productInCart) => {
             return productInCart.id === product.id &&
-              productInCart.size === product.size &&
-              productInCart.color === product.color
+              productInCart.chosenSize === sizeToCompare 
+              
+//&& productInCart.color === product.color
               ? { ...productInCart, count: productInCart.count + count }
               : productInCart;
           }),
         };
       }
-      return { cartItems: [...state.cartItems, { ...product, count }] };
+      return { cartItems: [...state.cartItems, { ...product, count, chosenSize: sizeToCompare }] };
     }),
   decrease: (product)=>set((state)=>{
-const existing = state.cartItems.find(el=> el.id===product.id)
+const existing = state.cartItems.find(el=> el.id===product.id && el.chosenSize===product.chosenSize)
 if(existing){
  if(existing.count >1){
   return {
-    cartItems: state.cartItems.map(el=> el.id===product.id? {...el, count: el.count -1} : el )   }
+    cartItems: state.cartItems.map(el=> el.id===product.id && el.chosenSize === product.chosenSize? {...el, count: el.count -1} : el )   }
  }
  else {
-return {cartItems:state.cartItems.filter(el=> el.id!==product.id)}
+return {cartItems:state.cartItems.filter(el=> el.id!==product.id || el.chosenSize!==product.chosenSize)}
 
  }
 
@@ -57,7 +59,7 @@ return {cartItems:state.cartItems.filter(el=> el.id!==product.id)}
   }),
   
 deleteItem: (product)=> set((state)=>{
-return {cartItems: state.cartItems.filter(el=>el.id!==product.id) }
+return {cartItems: state.cartItems.filter(el=>el.id!==product.id || el.chosenSize!==product.chosenSize) }
 
 })
 

@@ -13,7 +13,7 @@ import ProductPrice from "../../shared/ui/productPrice/productPrice";
 function ProductPage() {
   const addItem = useCartStore((state) => state.addItem);
   const [chosenSize, setSize] = useState<string | null>(null);
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
 
   const { id } = useParams();
   const product = products.find((product) => product.id === Number(id));
@@ -117,7 +117,7 @@ function ProductPage() {
 
             <button
               className="product-page__button"
-              onClick={() => addItem(product, count)}
+              onClick={() => addItem(product, count, chosenSize)}
             >
               Add to Cart
             </button>
