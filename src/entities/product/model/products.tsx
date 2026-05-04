@@ -162,7 +162,7 @@ export const products: Product[] = [
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "new",
-    img: ["/imgs/products/id7.jpg"],
+    img: ["/imgs/products/id7.jpg", "/imgs/products/id7-1.jpg", "/imgs/products/id7-2.jpg", "/imgs/products/id7-3.jpg"],
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id7.svg",
       total: 3.0,
@@ -183,7 +183,7 @@ export const products: Product[] = [
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "old",
-    img: ["/imgs/products/id8.jpg"],
+    img: ["/imgs/products/id8.jpg", "/imgs/products/id8-1.jpg", "/imgs/products/id8-2.jpg", "/imgs/products/id8-3.jpg"],
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id8.svg",
       total: 4.5,
@@ -203,7 +203,7 @@ export const products: Product[] = [
     description:
       " This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style. ",
     date: "new",
-    img: ["/imgs/products/id9.jpg"],
+    img: ["/imgs/products/id9.jpg", "/imgs/products/id9-1.jpg", "/imgs/products/id9-2.jpg","/imgs/products/id9-3.jpg"],
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id9.svg",
       total: 4.5,
@@ -224,7 +224,7 @@ export const products: Product[] = [
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "old",
-    img: ["/imgs/products/id10.jpg"],
+    img: ["/imgs/products/id10.jpg", "/imgs/products/id10-1.jpg", "/imgs/products/id10-2.jpg","/imgs/products/id10-3.jpg" ],
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id10.svg",
       total: 4.0,
@@ -238,14 +238,14 @@ export const products: Product[] = [
     id: 11,
     name: "Gradient Graphic T-shirt",
     category: "T-shirts",
-    sex: "men",
+    sex: "women",
     style: "casual",
     color: ["white"],
     size: ["xs", "s", "m", "l", "xl"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "new",
-    img: ["/imgs/products/id11.jpg"],
+    img: ["/imgs/products/id11.jpg", "/imgs/products/id11-1.jpg", "/imgs/products/id11-2.jpg", "/imgs/products/id11-3.jpg"],
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id11.svg",
       total: 3.5,
@@ -259,14 +259,14 @@ export const products: Product[] = [
     id: 12,
     name: "Polo with Tipping Details",
     category: "T-shirts",
-    sex: "men",
+    sex: "women",
     style: "casual",
     color: ["pink"],
     size: ["s", "m", "xl"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "old",
-    img: ["/imgs/products/id12.jpg"],
+    img: ["/imgs/products/id12.jpg", "/imgs/products/id12-1.jpg", "/imgs/products/id12-2.jpg", "/imgs/products/id12-3.jpg"],
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id12.svg",
       total: 4.5,
@@ -287,7 +287,7 @@ export const products: Product[] = [
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "old",
-    img: ["/imgs/products/id13.jpg"],
+    img: ["/imgs/products/id13.jpg", "/imgs/products/id13-1.jpg", "/imgs/products/id13-2.jpg", "/imgs/products/id13-3.jpg"],
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id13.svg",
       total: 5.0,
