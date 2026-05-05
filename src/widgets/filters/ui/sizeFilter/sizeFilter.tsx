@@ -17,7 +17,7 @@ function SizeFilter({ chosenSize, setSize }: SizeProp) {
           htmlFor={`"size-filter__${inx}"`}
         >
           <input
-            onChange={() => setSize(size)}
+            onChange={() => setSize(chosenSize===size? null : size)}
             checked={chosenSize === size}
             className="size-filter__input"
             id={`"size-filter__${inx}"`}

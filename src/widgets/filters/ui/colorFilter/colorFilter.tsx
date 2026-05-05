@@ -7,6 +7,7 @@ interface ColorProps {
 }
 
 function ColorFilter({ colorId, setColor }: ColorProps) {
+
   return (
     <fieldset className="color-filter__wrapper">
       <legend className="color-filter__title">Colors</legend>
@@ -19,7 +20,7 @@ function ColorFilter({ colorId, setColor }: ColorProps) {
         >
           <input
             checked={colorId === color.id}
-            onChange={() => setColor(color.id)}
+            onChange={() => setColor(colorId===color.id ? null : color.id)}
             id={`color-filter__${color.id}`}
             className="color-filter__input"
             type="checkbox"

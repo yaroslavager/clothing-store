@@ -4,7 +4,7 @@ export interface Product {
   category: string;
   sex: string;
   style: string;
-  color?: string[] | null;
+  color?: number[] | null;
   size: ("xs" | "s" | "m" | "l" | "xl")[];
   description: string;
   date: "new" | "old";
@@ -24,7 +24,7 @@ export const products: Product[] = [
     category: "T-shirts",
     sex: "men",
     style: "casual",
-    color: ["black"],
+    color: [10],
     size: ["xs", "s", "m", "l", "xl"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
@@ -49,7 +49,7 @@ export const products: Product[] = [
     category: "Jeans",
     sex: "men",
     style: "casual",
-    color: ["dark blue", "light blue"],
+    color: [5, 6],
     size: ["xs", "s", "xl"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
@@ -74,12 +74,17 @@ export const products: Product[] = [
     category: "Shirts",
     sex: "men",
     style: "casual",
-    color: ["pink"],
+    color: [8],
     size: ["s", "m", "l", "xl"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "new",
-    img: ["/imgs/products/id3.jpg", "/imgs/products/id3-1.jpg", "/imgs/products/id3-2.jpg", "/imgs/products/id3-3.jpg"],
+    img: [
+      "/imgs/products/id3.jpg",
+      "/imgs/products/id3-1.jpg",
+      "/imgs/products/id3-2.jpg",
+      "/imgs/products/id3-3.jpg",
+    ],
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id3.svg",
       total: 4.5,
@@ -95,12 +100,17 @@ export const products: Product[] = [
     category: "T-shirts",
     sex: "men",
     style: "casual",
-    color: ["orange"],
+    color: [4],
     size: ["xs", "m", "l"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "new",
-    img: ["/imgs/products/id4.jpg", "/imgs/products/id4-1.jpg", "/imgs/products/id4-2.jpg", "/imgs/products/id4-3.jpg"],
+    img: [
+      "/imgs/products/id4.jpg",
+      "/imgs/products/id4-1.jpg",
+      "/imgs/products/id4-2.jpg",
+      "/imgs/products/id4-3.jpg",
+    ],
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id4.svg ",
       total: 4.5,
@@ -115,12 +125,17 @@ export const products: Product[] = [
     category: "Shirts",
     sex: "men",
     style: "formal",
-    color: ["green"],
+    color: [1],
     size: ["xs", "s", "m", "l", "xl"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "old",
-    img: ["/imgs/products/id5.jpg", "/imgs/products/id5-1.jpg", "/imgs/products/id5-2.jpg", "/imgs/products/id5-3.jpg"],
+    img: [
+      "/imgs/products/id5.jpg",
+      "/imgs/products/id5-1.jpg",
+      "/imgs/products/id5-2.jpg",
+      "/imgs/products/id5-3.jpg",
+    ],
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id5.svg",
       total: 5.0,
@@ -136,12 +151,17 @@ export const products: Product[] = [
     category: "T-shirts",
     sex: "men",
     style: "casual",
-    color: ["orange"],
+    color: [4],
     size: ["m", "l"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "old",
-    img: ["/imgs/products/id6.jpg", "/imgs/products/id6-1.jpg", "/imgs/products/id6-2.jpg", "/imgs/products/id6-3.jpg"],
+    img: [
+      "/imgs/products/id6.jpg",
+      "/imgs/products/id6-1.jpg",
+      "/imgs/products/id6-2.jpg",
+      "/imgs/products/id6-3.jpg",
+    ],
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id6.svg",
       total: 4.0,
@@ -157,12 +177,17 @@ export const products: Product[] = [
     category: "Shorts",
     sex: "women",
     style: "casual",
-    color: ["light blue"],
+    color: [5],
     size: ["xs", "s"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "new",
-    img: ["/imgs/products/id7.jpg", "/imgs/products/id7-1.jpg", "/imgs/products/id7-2.jpg", "/imgs/products/id7-3.jpg"],
+    img: [
+      "/imgs/products/id7.jpg",
+      "/imgs/products/id7-1.jpg",
+      "/imgs/products/id7-2.jpg",
+      "/imgs/products/id7-3.jpg",
+    ],
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id7.svg",
       total: 3.0,
@@ -178,12 +203,17 @@ export const products: Product[] = [
     category: "Jeans",
     sex: "women",
     style: "casual",
-    color: ["black"],
+    color: [10],
     size: ["s", "m", "l"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "old",
-    img: ["/imgs/products/id8.jpg", "/imgs/products/id8-1.jpg", "/imgs/products/id8-2.jpg", "/imgs/products/id8-3.jpg"],
+    img: [
+      "/imgs/products/id8.jpg",
+      "/imgs/products/id8-1.jpg",
+      "/imgs/products/id8-2.jpg",
+      "/imgs/products/id8-3.jpg",
+    ],
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id8.svg",
       total: 4.5,
@@ -198,12 +228,17 @@ export const products: Product[] = [
     category: "T-shirts",
     sex: "men",
     style: "party",
-    color: ["green"],
+    color: [1],
     size: ["xs", "s", "m", "l", "xl"],
     description:
       " This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style. ",
     date: "new",
-    img: ["/imgs/products/id9.jpg", "/imgs/products/id9-1.jpg", "/imgs/products/id9-2.jpg","/imgs/products/id9-3.jpg"],
+    img: [
+      "/imgs/products/id9.jpg",
+      "/imgs/products/id9-1.jpg",
+      "/imgs/products/id9-2.jpg",
+      "/imgs/products/id9-3.jpg",
+    ],
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id9.svg",
       total: 4.5,
@@ -219,12 +254,17 @@ export const products: Product[] = [
     category: "T-shirts",
     sex: "men",
     style: "casual",
-    color: ["dark blue"],
+    color: [6],
     size: ["xs", "s", "l", "xl"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "old",
-    img: ["/imgs/products/id10.jpg", "/imgs/products/id10-1.jpg", "/imgs/products/id10-2.jpg","/imgs/products/id10-3.jpg" ],
+    img: [
+      "/imgs/products/id10.jpg",
+      "/imgs/products/id10-1.jpg",
+      "/imgs/products/id10-2.jpg",
+      "/imgs/products/id10-3.jpg",
+    ],
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id10.svg",
       total: 4.0,
@@ -240,12 +280,17 @@ export const products: Product[] = [
     category: "T-shirts",
     sex: "women",
     style: "casual",
-    color: ["white"],
+    color: [9],
     size: ["xs", "s", "m", "l", "xl"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "new",
-    img: ["/imgs/products/id11.jpg", "/imgs/products/id11-1.jpg", "/imgs/products/id11-2.jpg", "/imgs/products/id11-3.jpg"],
+    img: [
+      "/imgs/products/id11.jpg",
+      "/imgs/products/id11-1.jpg",
+      "/imgs/products/id11-2.jpg",
+      "/imgs/products/id11-3.jpg",
+    ],
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id11.svg",
       total: 3.5,
@@ -261,12 +306,17 @@ export const products: Product[] = [
     category: "T-shirts",
     sex: "women",
     style: "casual",
-    color: ["pink"],
+    color: [8],
     size: ["s", "m", "xl"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "old",
-    img: ["/imgs/products/id12.jpg", "/imgs/products/id12-1.jpg", "/imgs/products/id12-2.jpg", "/imgs/products/id12-3.jpg"],
+    img: [
+      "/imgs/products/id12.jpg",
+      "/imgs/products/id12-1.jpg",
+      "/imgs/products/id12-2.jpg",
+      "/imgs/products/id12-3.jpg",
+    ],
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id12.svg",
       total: 4.5,
@@ -282,12 +332,17 @@ export const products: Product[] = [
     category: "T-shirts",
     sex: "men",
     style: "sport",
-    color: ["black"],
+    color: [10],
     size: ["xs", "s", "m", "l"],
     description:
       " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque minus voluptates quam, quaerat eligendi nobis quos consectetur quod, est necessitatibus atque aspernatur eos asperiores magni excepturi rerum autem reprehenderit fuga! ",
     date: "old",
-    img: ["/imgs/products/id13.jpg", "/imgs/products/id13-1.jpg", "/imgs/products/id13-2.jpg", "/imgs/products/id13-3.jpg"],
+    img: [
+      "/imgs/products/id13.jpg",
+      "/imgs/products/id13-1.jpg",
+      "/imgs/products/id13-2.jpg",
+      "/imgs/products/id13-3.jpg",
+    ],
     reviews: {
       stars: "src/Components/ItemCard/Imgs/stars/id13.svg",
       total: 5.0,
