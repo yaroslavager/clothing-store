@@ -21,20 +21,26 @@ function CatalogPage() {
   }, []);
 
   const [searchParams] = useSearchParams();
- 
- 
 
   const arrivalsParam = searchParams.get(`arrival`);
   const reviewParam = searchParams.get(`review`);
   const categoryParam = searchParams.get(`category`);
   const sexParam = searchParams.get(`sex`);
-  const colorParam = searchParams.get(`color`);
-  const sizeParam = searchParams.get(`size`);
   const styleParam = searchParams.get(`style`);
   const discountParam = searchParams.get(`sale`);
+  // const colorParam = searchParams.get(`color`);
+  // const sizeParam = searchParams.get(`size`);
+
+  const price0 = price[0];
+  const price1 = price[1];
+
   //STYLES
 
   const filteredParam = products.filter((product) => {
+    const actualPrice = product.discount
+      ? product.price - (product.price * product.discount) / 100
+      : product.price;
+
     if (arrivalsParam === "new" && product.date !== arrivalsParam) {
       return false;
     }
@@ -47,10 +53,10 @@ function CatalogPage() {
     if (sexParam && product.sex !== sexParam) {
       return false;
     }
-    if (colorParam && product.color !== colorParam) {
+    if (colorId !== null && !product.color.includes(colorId)) {
       return false;
     }
-    if (sizeParam && product.size !== sizeParam) {
+    if (chosenSize && !product.size.includes(chosenSize)) {
       return false;
     }
     if (styleParam && product.style !== styleParam) {
@@ -59,18 +65,20 @@ function CatalogPage() {
     if (discountParam === "discount" && !product.discount) {
       return false;
     }
+    if (!(actualPrice >= price0 && actualPrice <= price1)) {
+      return false;
+    }
     return true;
   });
 
- const getTitle=()=>{
-if(categoryParam) return categoryParam;
-if(styleParam) return styleParam;
-if(sexParam) return sexParam;
-if(discountParam) return discountParam
-if(arrivalsParam) return arrivalsParam
-return "casual"
- }
-
+  const getTitle = () => {
+    if (categoryParam) return categoryParam;
+    if (styleParam) return styleParam;
+    if (sexParam) return sexParam;
+    if (discountParam) return discountParam;
+    if (arrivalsParam) return arrivalsParam;
+    return "casual";
+  };
 
   return (
     <>
@@ -84,9 +92,8 @@ return "casual"
           setSize={setSize}
           isOpen={filtersIsOpen}
           filtersIsOpen={fFiltersIsOpen}
-  
         />
-        
+
         <ProductGrid
           products={filteredParam}
           title={getTitle()}
@@ -94,7 +101,6 @@ return "casual"
           filtersIsOpen={fFiltersIsOpen}
           filtersButtonIs={true}
         />
-        
       </main>
     </>
   );

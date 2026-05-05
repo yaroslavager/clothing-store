@@ -1,17 +1,17 @@
 .filters {
   &__wrapper {
-  position: sticky;
-  top: 0px;
-  overflow-y: auto ;
-  overflow-x: hidden;
-height: 100vh;
+    position: sticky;
+    top: 0px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100vh;
     width: 100%;
     max-width: 295px;
     max-height: 1155px;
     border-radius: var(--br-cart);
     border: 1px solid var(--color-highlight);
     padding: 1.5rem;
-    background-color: var(  --color-fourth);
+    background-color: var(--color-fourth);
     &::-webkit-scrollbar {
       width: 0px;
     }
@@ -22,7 +22,6 @@ height: 100vh;
       padding: 0;
       min-width: none;
     }
-      
   }
   &__border {
     border-color: var(--color-highlight);
@@ -36,7 +35,7 @@ height: 100vh;
     font-size: var(--fs-xs);
     font-weight: 700;
   }
-  &__main-icon{
+  &__main-icon {
     cursor: pointer;
   }
   &__title {
@@ -44,55 +43,52 @@ height: 100vh;
     font-weight: 700;
     padding-bottom: 1.5rem;
   }
-&__category{
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-}
-&__category-list{
-display: flex;
-justify-content: space-between;
-cursor: pointer;
-}
-&__dress-style{
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-}
-&__dress-style-list{
-  display: flex;
-  justify-content: space-between;
-  cursor: pointer;
-}
-&__button{
-  width: 100%;
-  height: var( --bs-h-m);
-  border-radius: var(  --br-button-input);
-  background-color: var(  --color-primary);
-  color: var( --color-fourth);
-  border: none;
-  margin-top: 24px;
-  cursor: pointer;
-}
+  &__category {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+  &__category-list {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  &__dress-style {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+  &__dress-style-list {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  &__button {
+    width: 100%;
+    height: var(--bs-h-m);
+    border-radius: var(--br-button-input);
+    background-color: var(--color-primary);
+    color: var(--color-fourth);
+    border: none;
+    margin-top: 24px;
+    cursor: pointer;
+  }
   // MEDIA
   @media (max-width: 768px) {
     &__wrapper {
       position: absolute;
       left: 0;
       z-index: 90;
-         transform: translateX(-100%);
-    transition: transform 0.6s ease;
-     width: 100%;
-     max-width: 100%;
-     &--open{
-     
-      display: block;
-      position: absolute;
-      left: 0;
+      transform: translateX(-100%);
+      transition: transform 0.6s ease;
+      width: 100%;
+      max-width: 100%;
+      &--open {
+        display: block;
+        position: absolute;
+        left: 0;
         transform: translateX(0);
+      }
     }
-
-    }
-   
   }
 }
