@@ -6,9 +6,12 @@ function Search() {
 const fSearchOpen=()=>{
     setSearchOpen(!isSearchOpen)
 }
+console.log(isSearchOpen)
   return (
-    <form className="search" role="search"  >
-      <label htmlFor="search-input">
+    <form className={`search ${isSearchOpen? "search--active" : ""}`} role="search"  >
+      <label htmlFor="search-input" className="search__label"
+      onClick={fSearchOpen}
+      >
       <svg
         className="search__icon"
         aria-hidden="true"
@@ -23,6 +26,8 @@ const fSearchOpen=()=>{
           fill="currentColor"
         />
       </svg>
+
+      
  </label>
       <input
       id="search-input"

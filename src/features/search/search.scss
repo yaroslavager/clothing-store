@@ -25,7 +25,10 @@
       margin 1s ease;
     flex-shrink: 0;
   }
-
+&__label{
+  cursor: pointer;
+  pointer-events: none;
+}
   &__input {
     width: 100%;
     background-color: transparent;
@@ -53,7 +56,9 @@
     width: 24px;
     background-color: transparent;
     cursor: pointer;
-
+&:hover{
+  border: none;
+}
     &__input {
       opacity: 0;
       width: 0;
@@ -63,6 +68,24 @@
       color: var(--color-text-primary);
       margin: 0;
       right: 1rem;
+    }
+&__label{
+  cursor: pointer;
+  pointer-events: auto;
+}
+    &--active{
+      width: 100%;
+  border-radius: var( --br-button-input);
+  border: 1px solid transparent;
+  background-color: var(--color-bg-secondary);
+.search__icon{
+   margin: 1rem;
+       color: var(--color-text-thirdly);
+}
+.search__input{
+width: 100%;
+opacity: 1;
+}
     }
   }
 }
