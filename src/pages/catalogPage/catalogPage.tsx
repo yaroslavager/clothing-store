@@ -7,7 +7,7 @@ import Filters from "../../widgets/filters/filters";
 import ProductGrid from "../../widgets/productGrid/productGrid";
 
 function CatalogPage() {
-  const [price, setPrice] = useState<number[]>([50, 200]);
+  const [price, setPrice] = useState<number[]>([0, 500]);
   const [colorId, setColor] = useState<number | null>(null);
   const [chosenSize, setSize] = useState<string | null>(null);
 
@@ -28,6 +28,7 @@ function CatalogPage() {
   const sexParam = searchParams.get(`sex`);
   const styleParam = searchParams.get(`style`);
   const discountParam = searchParams.get(`sale`);
+  const search =searchParams.get(`search`)
   // const colorParam = searchParams.get(`color`);
   // const sizeParam = searchParams.get(`size`);
 
@@ -68,10 +69,14 @@ function CatalogPage() {
     if (!(actualPrice >= price0 && actualPrice <= price1)) {
       return false;
     }
+    if(search && !product.name.toLowerCase().includes(search.toLocaleLowerCase())){
+      return false
+    }
     return true;
   });
 
   const getTitle = () => {
+    if(search) return `${search}`
     if (categoryParam) return categoryParam;
     if (styleParam) return styleParam;
     if (sexParam) return sexParam;

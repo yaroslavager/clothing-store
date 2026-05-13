@@ -20,7 +20,7 @@ export interface Product {
 export const products: Product[] = [
   {
     id: 1,
-    name: "T-shirt with Tape Details",
+    name: "Black T-shirt with Tape Details",
     category: "T-shirts",
     sex: "men",
     style: "casual",
@@ -199,7 +199,7 @@ export const products: Product[] = [
 
   {
     id: 8,
-    name: "Faded Skinny Jeans",
+    name: "Black Faded Skinny Jeans",
     category: "Jeans",
     sex: "women",
     style: "casual",
