@@ -1,14 +1,28 @@
 import "./search.scss";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Search() {
-    const [isSearchOpen, setSearchOpen]=useState(false)
+    const [isSearchOpen, setSearchOpen]=useState<boolean>(false)
 const fSearchOpen=()=>{
     setSearchOpen(!isSearchOpen)
 }
+const [inputValue, setInputValue]=useState<string>("")
+const fInputValue=(e)=>{
+  setInputValue(e.target.value)
+}
+console.log(inputValue)
 console.log(isSearchOpen)
+const navigate = useNavigate()
+const handleSearch=(e)=>{
+e.preventDefault()
+if(inputValue.trim()){
+navigate(`/catalog?search=${inputValue.trim().toLowerCase()}`)
+}
+setInputValue("")
+}
   return (
-    <form className={`search ${isSearchOpen? "search--active" : ""}`} role="search"  >
+    <form onSubmit={handleSearch} className={`search ${isSearchOpen? "search--active" : ""}`} role="search"  >
       <label htmlFor="search-input" className="search__label"
       onClick={fSearchOpen}
       >
@@ -29,7 +43,9 @@ console.log(isSearchOpen)
 
       
  </label>
-      <input
+      <input 
+      value={inputValue}
+      onChange={fInputValue}
       id="search-input"
       name="search"
         className="search__input"
