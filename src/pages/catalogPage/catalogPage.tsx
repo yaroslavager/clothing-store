@@ -35,6 +35,7 @@ function CatalogPage() {
   const price0 = price[0];
   const price1 = price[1];
 
+ 
   //STYLES
 
   const filteredParam = products.filter((product) => {
@@ -74,6 +75,10 @@ function CatalogPage() {
     }
     return true;
   });
+
+  
+console.table(filteredParam)
+
 
   const getTitle = () => {
     if(search) return `${search}`

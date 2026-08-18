@@ -2,17 +2,18 @@ import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useCartStore } from "../../entities/cart/model/cartStore";
 import { useState } from "react";
-
+import { type Sizes } from "../../shared/config/sizes";
 import "./productPage.scss";
 
 import { products } from "../../entities/product/model/products";
 import { colors } from "../../shared/config/colors";
 import ProductPrice from "../../shared/ui/productPrice/productPrice";
 
-
 function ProductPage() {
   const addItem = useCartStore((state) => state.addItem);
-  const [chosenSize, setSize] = useState<string | null>(null);
+  // SIZES
+  const [chosenSize, setSize] = useState<Sizes | null>(null);
+
   const [count, setCount] = useState(1);
 
   const { id } = useParams();
@@ -29,19 +30,13 @@ function ProductPage() {
   return (
     <>
       <div className="product-page__wrapper container">
-
-
         <div className="product-page__img-wrapper">
-          
-<img className="product-page__imgs" src={product.img[1]} alt="" />
-<img className="product-page__imgs" src={product.img[2]} alt="" />
-<img className="product-page__imgs" src={product.img[3]} alt="" />
+          <img className="product-page__imgs" src={product.img[1]} alt="" />
+          <img className="product-page__imgs" src={product.img[2]} alt="" />
+          <img className="product-page__imgs" src={product.img[3]} alt="" />
 
-<img className="product-page__main-img" src={product.img[0]} alt="" />
+          <img className="product-page__main-img" src={product.img[0]} alt="" />
         </div>
-
-
-
 
         <div className="product-page__info">
           <h1 className="product-page__h1">{product.name.toUpperCase()}</h1>
@@ -96,6 +91,12 @@ function ProductPage() {
               ))}
             </div>
           </div>
+          {/* Тут должено вылазить предупреждение, если неи выбрали сайз */}
+          {chosenSize? null : (
+            <p>Выберите размер!</p>
+          ) }
+
+
           <hr className="product-page__hr" />
           <div className="product-page__add-product">
             <div className="product-page__count">
@@ -117,10 +118,16 @@ function ProductPage() {
 
             <button
               className="product-page__button"
-              onClick={() => addItem(product, count, chosenSize)}
+              disabled={!chosenSize}
+              onClick={() => 
+                {if(chosenSize){
+                addItem(product, count, chosenSize)
+                }}
+              }
             >
               Add to Cart
             </button>
+          
           </div>
         </div>
       </div>
