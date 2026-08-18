@@ -1,0 +1,67 @@
+[33mcommit 19deaca75f40b41828330b9120b9c79eaec4d367[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfix/ts-errors[m[33m)[m
+Author: Yaroslava <yaroslava.ger4@gmail.com>
+Date:   Tue Aug 18 16:07:06 2026 +0400
+
+    fix: ts errors
+
+ src/assets/fonts/products/id1-1.jpg     | Bin [31m1443702[m -> [32m0[m bytes
+ src/assets/fonts/products/id1-2.jpg     | Bin [31m1641312[m -> [32m0[m bytes
+ src/assets/fonts/products/id1-3.jpg     | Bin [31m1789415[m -> [32m0[m bytes
+ src/assets/fonts/products/id1.jpg       | Bin [31m139282[m -> [32m0[m bytes
+ src/assets/fonts/products/id10-1.jpg    | Bin [31m1821239[m -> [32m0[m bytes
+ src/assets/fonts/products/id10-2.jpg    | Bin [31m2036802[m -> [32m0[m bytes
+ src/assets/fonts/products/id10-3.jpg    | Bin [31m3202884[m -> [32m0[m bytes
+ src/assets/fonts/products/id10.jpg      | Bin [31m282210[m -> [32m0[m bytes
+ src/assets/fonts/products/id11-1.jpg    | Bin [31m2350277[m -> [32m0[m bytes
+ src/assets/fonts/products/id11-2.jpg    | Bin [31m2895066[m -> [32m0[m bytes
+ src/assets/fonts/products/id11-3.jpg    | Bin [31m2950725[m -> [32m0[m bytes
+ src/assets/fonts/products/id11.jpg      | Bin [31m236376[m -> [32m0[m bytes
+ src/assets/fonts/products/id12-1.jpg    | Bin [31m1583640[m -> [32m0[m bytes
+ src/assets/fonts/products/id12-2.jpg    | Bin [31m1658718[m -> [32m0[m bytes
+ src/assets/fonts/products/id12-3.jpg    | Bin [31m1806406[m -> [32m0[m bytes
+ src/assets/fonts/products/id12.jpg      | Bin [31m308866[m -> [32m0[m bytes
+ src/assets/fonts/products/id13-1.jpg    | Bin [31m1430449[m -> [32m0[m bytes
+ src/assets/fonts/products/id13-2.jpg    | Bin [31m1421611[m -> [32m0[m bytes
+ src/assets/fonts/products/id13-3.jpg    | Bin [31m1431069[m -> [32m0[m bytes
+ src/assets/fonts/products/id13.jpg      | Bin [31m226356[m -> [32m0[m bytes
+ src/assets/fonts/products/id2-1.jpg     | Bin [31m1670425[m -> [32m0[m bytes
+ src/assets/fonts/products/id2-2.jpg     | Bin [31m1961902[m -> [32m0[m bytes
+ src/assets/fonts/products/id2-3.jpg     | Bin [31m2495349[m -> [32m0[m bytes
+ src/assets/fonts/products/id2.jpg       | Bin [31m305071[m -> [32m0[m bytes
+ src/assets/fonts/products/id3-1.jpg     | Bin [31m1432387[m -> [32m0[m bytes
+ src/assets/fonts/products/id3-2.jpg     | Bin [31m1605527[m -> [32m0[m bytes
+ src/assets/fonts/products/id3-3.jpg     | Bin [31m1616938[m -> [32m0[m bytes
+ src/assets/fonts/products/id3.jpg       | Bin [31m491126[m -> [32m0[m bytes
+ src/assets/fonts/products/id4-1.jpg     | Bin [31m1398074[m -> [32m0[m bytes
+ src/assets/fonts/products/id4-2.jpg     | Bin [31m1355228[m -> [32m0[m bytes
+ src/assets/fonts/products/id4-3.jpg     | Bin [31m1317134[m -> [32m0[m bytes
+ src/assets/fonts/products/id4.jpg       | Bin [31m301221[m -> [32m0[m bytes
+ src/assets/fonts/products/id5-1.jpg     | Bin [31m2582838[m -> [32m0[m bytes
+ src/assets/fonts/products/id5-2.jpg     | Bin [31m2827517[m -> [32m0[m bytes
+ src/assets/fonts/products/id5-3.jpg     | Bin [31m2928882[m -> [32m0[m bytes
+ src/assets/fonts/products/id5.jpg       | Bin [31m396748[m -> [32m0[m bytes
+ src/assets/fonts/products/id6-1.jpg     | Bin [31m2907164[m -> [32m0[m bytes
+ src/assets/fonts/products/id6-2.jpg     | Bin [31m3552512[m -> [32m0[m bytes
+ src/assets/fonts/products/id6-3.jpg     | Bin [31m3993187[m -> [32m0[m bytes
+ src/assets/fonts/products/id6.jpg       | Bin [31m302564[m -> [32m0[m bytes
+ src/assets/fonts/products/id7-1.jpg     | Bin [31m1310860[m -> [32m0[m bytes
+ src/assets/fonts/products/id7-2.jpg     | Bin [31m1750249[m -> [32m0[m bytes
+ src/assets/fonts/products/id7-3.jpg     | Bin [31m1345758[m -> [32m0[m bytes
+ src/assets/fonts/products/id7.jpg       | Bin [31m282265[m -> [32m0[m bytes
+ src/assets/fonts/products/id8-1.jpg     | Bin [31m1243425[m -> [32m0[m bytes
+ src/assets/fonts/products/id8-2.jpg     | Bin [31m1299706[m -> [32m0[m bytes
+ src/assets/fonts/products/id8-3.jpg     | Bin [31m2143676[m -> [32m0[m bytes
+ src/assets/fonts/products/id8.jpg       | Bin [31m171225[m -> [32m0[m bytes
+ src/assets/fonts/products/id9-1.jpg     | Bin [31m1575268[m -> [32m0[m bytes
+ src/assets/fonts/products/id9-2.jpg     | Bin [31m1427966[m -> [32m0[m bytes
+ src/assets/fonts/products/id9-3.jpg     | Bin [31m1661574[m -> [32m0[m bytes
+ src/assets/fonts/products/id9.jpg       | Bin [31m582102[m -> [32m0[m bytes
+ src/entities/cart/model/cartStore.tsx   | 159 [32m+++++++++++++++++++[m[31m-------------[m
+ src/entities/product/model/products.tsx |   2 [32m+[m[31m-[m
+ src/features/search/search.tsx          |   8 [32m+[m[31m-[m
+ src/index.scss                          |   2 [32m+[m[31m-[m
+ src/pages/cartPage/cartPage.tsx         |   4 [32m+[m[31m-[m
+ src/pages/catalogPage/catalogPage.tsx   |   5 [32m+[m
+ src/pages/productPage/productPage.tsx   |  35 [32m++++[m[31m---[m
+ src/shared/config/sizes.tsx             |   4 [32m+[m[31m-[m
+ 60 files changed, 131 insertions(+), 88 deletions(-)
