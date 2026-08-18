@@ -1,5 +1,6 @@
 import "./hero.scss";
 import mainPhoto from "../../shared/assets/mainphoto.png";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
@@ -12,7 +13,9 @@ function Hero() {
           designed to bring out your individuality and cater to your sense of
           style.
         </p>
-        <button className="hero__button"> Shop Now</button>
+        <Link to="/catalog" className="hero__button">Shop Now</Link>
+        {/* <button > </button> */}
+
         <div className="hero__bottom">
           <div className="hero__info-wrapper" >
             <span className="hero__span">200+</span>

@@ -28,6 +28,9 @@
   }
 
   &__button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     width: var(--bs-xl);
     height: var(--bs-h-l);
     border-radius: var(--br-button-input);
@@ -36,6 +39,7 @@
     color: var(--color-text-highlight);
     cursor: pointer;
     padding: 0;
+   
   }
   &__bottom {
     display: flex;
