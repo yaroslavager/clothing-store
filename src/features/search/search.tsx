@@ -1,5 +1,6 @@
 import "./search.scss";
-import { useState } from "react";
+import { useState} from "react";
+import type {ChangeEvent, FormEvent} from "react"
 import { useNavigate } from "react-router-dom";
 
 function Search() {
@@ -8,13 +9,14 @@ const fSearchOpen=()=>{
     setSearchOpen(!isSearchOpen)
 }
 const [inputValue, setInputValue]=useState<string>("")
-const fInputValue=(e)=>{
+const fInputValue=(e: ChangeEvent<HTMLInputElement>)=>{
   setInputValue(e.target.value)
 }
 console.log(inputValue)
 console.log(isSearchOpen)
 const navigate = useNavigate()
-const handleSearch=(e)=>{
+
+const handleSearch=(e:FormEvent<HTMLFormElement>)=>{
 e.preventDefault()
 if(inputValue.trim()){
 navigate(`/catalog?search=${inputValue.trim().toLowerCase()}`)

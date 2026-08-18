@@ -54,7 +54,7 @@ document.title=`Cart | Shop.CO`
                   >-</button>
                   <span>{product.count}</span>{" "}
                   <button className="cart-page__count-button"
-                  onClick={()=>addItem(product, 1)}
+                  onClick={()=>addItem(product, 1, product.chosenSize)}
                   >+</button>
                 </div>
               </div>
@@ -80,7 +80,7 @@ document.title=`Cart | Shop.CO`
             <div className="cart-page__info-price">
               <p className="cart-page__info-price-title">Discount</p>
               <span className="cart-page__info-price--discount">
-                {cartItems.some((el) => el.discount > 0) ? `-` : ``}$
+                {cartItems.some((el) => el.discount && el.discount > 0) ? `-` : ``}$
                 {cartItems.reduce(
                   (acc, el) => (el.discount ? el.discount + acc : acc),
                   0,

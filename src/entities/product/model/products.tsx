@@ -4,7 +4,7 @@ export interface Product {
   category: string;
   sex: string;
   style: string;
-  color?: number[] | null;
+  color?: number[] | null | string[];
   size: ("xs" | "s" | "m" | "l" | "xl")[];
   description: string;
   date: "new" | "old";
