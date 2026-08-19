@@ -33,5 +33,26 @@
     width: 24px;
     height: 24px;
     cursor: pointer;
+    
+  }
+  &__cart-wrapper{
+    position: relative;
+
+  }
+  &__cart-badge{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+position: absolute;
+top: 13px;
+right: 5px;
+color: var(--color-highlight3);
+font-weight: 600;
+width: 1.5rem;
+height: 1.5rem;
+background-color: var(--color-bg-secondary);
+border-radius: var(--br-button-input);
+font-size: var(--fs-xxs);
+
   }
 }
