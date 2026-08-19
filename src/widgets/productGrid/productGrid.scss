@@ -9,6 +9,7 @@
     align-items: center;
     gap: clamp(0.1875rem, -0.1853rem + 1.5294vw, 1rem);
   }
+
   &__columns {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -42,9 +43,7 @@
     height: clamp(10.87rem, 6.3191rem + 13.5882vw, 17.625rem);
     border-radius: var(--br-cart);
   }
-  &__title {
   
-  }
   &__product {
     min-width: 0;
   }
@@ -95,10 +94,16 @@
        grid-template-columns: repeat(4, 298px);
        gap: 16px;
        overflow-x: auto;
+       scrollbar-color:var(--color-highlight) transparent;
+
        padding: 0;
        margin: 0;
-       
+       &::-webkit-scrollbar {
+          scrollbar-color:var(--color-highlight) transparent;
+  
+  }
     }
+   
     &__columns &__img{
       width: 295px;
       height: 298px;
@@ -129,3 +134,4 @@
 
   }
 }
+

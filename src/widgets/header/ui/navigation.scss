@@ -9,6 +9,9 @@
 &__item:hover{
 color: var(--color-text-secondary);
 }
+&__item{
+  cursor: pointer;
+}
   &__subMenu {
     position: absolute;
     z-index: 100;
