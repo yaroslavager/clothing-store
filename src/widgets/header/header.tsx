@@ -4,9 +4,10 @@ import BurgerMenu from "../../shared/ui/burgerMenu/burgerMenu";
 import Navigation from "./ui/navigation"
 import Search from "../../features/search/search";
 import AuthForm from "../../features/authForm/authForm";
-
+import { useCartStore } from "../../entities/cart/model/cartStore";
 
 function Header() {
+  const productsInCart= useCartStore((state)=>state.cartItems).length
   return (
     <header className="header container">
       <nav className="header__nav">
@@ -29,8 +30,12 @@ function Header() {
         <div className="header__menu">
 
           {/* Cart */}
-          <Link to="/cart">
+          <Link className="header__cart-wrapper" to="/cart">
             <img className="header__icon" src="/cart.svg" alt="cart" />
+
+       
+              <span className="header__cart-badge">{productsInCart}</span>
+
           </Link>
           {/* LogIn */}
 <AuthForm/>
