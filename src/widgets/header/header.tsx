@@ -7,7 +7,8 @@ import AuthForm from "../../features/authForm/authForm";
 import { useCartStore } from "../../entities/cart/model/cartStore";
 
 function Header() {
-  const productsInCart= useCartStore((state)=>state.cartItems).length
+  const productsInCart= useCartStore((state)=>state.cartItems).reduce((acc,el)=> el.count+acc ,0)
+
   return (
     <header className="header container">
       <nav className="header__nav">
@@ -33,8 +34,7 @@ function Header() {
           <Link className="header__cart-wrapper" to="/cart">
             <img className="header__icon" src="/cart.svg" alt="cart" />
 
-       
-              <span className="header__cart-badge">{productsInCart}</span>
+       {productsInCart >= 1 ? <span className="header__cart-badge">{productsInCart}</span> : null}
 
           </Link>
           {/* LogIn */}

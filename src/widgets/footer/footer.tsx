@@ -1,28 +1,86 @@
 import "./footer.scss";
 import FooterList from "../../shared/ui/footerList/footerList";
+import { useState, type FormEvent } from "react";
 
 function Footer() {
+//Email 
+const [email, setEmail]=useState("")
+console.log(email)
+//Status
+const [status, setStatus]=useState<"idle"|"loading" | "success"|"error">("idle")
+const [showToast, setShowToast]=useState(false)
+const handleSubmit =async (e: FormEvent<HTMLFormElement>)=>{
+  e.preventDefault()
+  setStatus("loading")
+try{
+  const res= await fetch(`https://jsonplaceholder.typicode.com/posts`, {
+method: "POST",
+headers: {
+  "Content-Type": "application/json"
+},
+body: JSON.stringify({email: email})
+
+  })
+if(res.ok){
+  setStatus("success")
+  setShowToast(true)
+  setEmail("")
+    console.log("success")
+  } else{
+    throw new Error
+  }
+} catch(error){
+console.log(error)
+setStatus("error")
+setShowToast(true)
+}
+
+  
+}
+
   return (
     <div className="footer__wrapper">
       <div className="footer__wrap container">
+
         <div className="footer__subscription">
           <h2 className="footer__title">
             STAY UPTO DATE ABOUT <br /> OUR LATEST OFFERS
           </h2>
-          <div className="footer__data-wraper">
+          <form method="POST"
+            onSubmit={handleSubmit}
+          className="footer__data-wraper">
             <label htmlFor="footer-email">
+
               <input
+              value={email}
+              onChange={(e)=> setEmail(e.target.value)}
                 className="footer__input"
                 type="email"
                 name="email"
                 id="footer-email"
                 placeholder="Enter your email address"
+                required
               />
             </label>
 
-            <button className="footer__button">Subscribe to Newsletter</button>
-          </div>
+            <button 
+            type="submit" 
+            className="footer__button">Subscribe to Newsletter</button>
+          </form>
         </div>
+{showToast && (
+<div className="footer__toast">
+ 
+  <p className="footer__toast-message">
+{status ==="success" ? "Thank you for subscription" : "Somethimg went wrong"} 
+  </p>
+   <button
+   onClick={()=>setShowToast(false)}
+   className="footer__toast-button">X</button>
+</div>
+
+)}
+
 
         <div className="footer__info-wrapper ">
           {/* что-то из информациии */}
