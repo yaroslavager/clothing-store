@@ -14,7 +14,6 @@ function Hero() {
           style.
         </p>
         <Link to="/catalog" className="hero__button">Shop Now</Link>
-        {/* <button > </button> */}
 
         <div className="hero__bottom">
           <div className="hero__info-wrapper" >
