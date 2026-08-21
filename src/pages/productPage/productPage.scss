@@ -3,7 +3,7 @@
     display: flex;
     gap:   clamp(1rem, 0.5985rem + 1.6471vw, 1.875rem);
     padding: 1rem;
-    padding-bottom: 130px;  
+    padding-bottom: 12rem;  
     // CHANGE!!
   }
   &__img-wrapper {
@@ -61,6 +61,7 @@
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
+    
   }
   &__size-input {
     width: 0;
@@ -71,6 +72,7 @@
   }
 
   &__size-label {
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
