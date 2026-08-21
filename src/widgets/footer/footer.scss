@@ -26,9 +26,29 @@
     justify-content: space-around;
     padding: 2.5rem 1rem;
   }
+  &__toast{
+    position: absolute;
+    display: flex;
+   justify-content: space-between;
+gap: 0.5rem;
+    z-index: 10;
+width: 20rem;
+height: auto;
+padding: 2rem;
+background-color: var(--color-text-highlight);
+border-radius: 2rem;
+  right: 0;
+  }
+ 
+  &__toast-button{
+border: none;
+background-color: transparent;
+align-self: flex-end;
+cursor: pointer;
+
+  }
   &__title {
     color: var(--color-text-highlight);
-   
   }
   &__data-wraper {
     display: flex;
@@ -41,6 +61,7 @@
     border-radius: var(--br-button-input);
     border: none;
     width: var(--bs-xxl);
+    padding-left: 1.5rem;
   }
   &__button {
     height: var(--bs-h-m);
