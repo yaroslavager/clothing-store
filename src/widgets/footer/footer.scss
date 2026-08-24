@@ -69,6 +69,8 @@ cursor: pointer;
     border: none;
     width: var(--bs-xxl);
     cursor: pointer;
+    font-size: var(--fs-base);
+    background-color: var( --color-bg-secondary);
   }
   &__info-wrapper {
     display: flex;

@@ -128,7 +128,7 @@
     cursor: pointer;
     border: none;
     background-color: none;
-    font-size: 2rem;
+    font-size: clamp(0.9375rem, 0.6794rem + 1.0588vw, 1.5rem);
   }
   &__button {
     width: 100%;

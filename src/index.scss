@@ -41,20 +41,3 @@ line-height: 100%;
 margin:  0;
 letter-spacing: -9%;
 }
-button, 
-input[type="submit"], 
-input[type="button"] {
-  -webkit-appearance: none; 
-  appearance: none;
-  color: inherit; 
-
-  -webkit-tap-highlight-color: transparent;
-  background-color: transparent; 
-  border: none;
-  font-family: inherit;
-  font-size: inherit;
-}
-a, a:visited, a:hover, a:active {
-  color: inherit;
-  -webkit-tap-highlight-color: transparent;
-}
