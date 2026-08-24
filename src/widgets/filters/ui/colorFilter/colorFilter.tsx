@@ -3,7 +3,7 @@ import { colors } from "../../../../shared/config/colors";
 
 interface ColorProps {
   colorId: number | null;
-  setColor: (id: number) => void;
+  setColor: (id: number | null) => void;
 }
 
 function ColorFilter({ colorId, setColor }: ColorProps) {
@@ -20,7 +20,7 @@ function ColorFilter({ colorId, setColor }: ColorProps) {
         >
           <input
             checked={colorId === color.id}
-            onChange={() => setColor(colorId===color.id ? null : color.id)}
+            onChange={() => setColor(colorId === color.id ? null : color.id)}
             id={`color-filter__${color.id}`}
             className="color-filter__input"
             type="checkbox"

@@ -3,7 +3,7 @@
 export interface Style{
     title: string,
     img?: string,
-    link?: string,
+    link: string,
     size?: "small"| "big"
 }
 

@@ -26,7 +26,7 @@ function HomePage() {
       <ProductGrid
       products={products}
         title="Top Selling"
-        filter={(product) => product.reviews?.total > 4}
+        filter={(product) => (product.reviews?.total ?? 0) > 4}
         limit={4}
         showButton
  path="/catalog?review=top"
