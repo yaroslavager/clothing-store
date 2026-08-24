@@ -1,4 +1,4 @@
-import "./browsebyStyle.scss";
+import "./browseByStyle.scss";
 import { dressStyles } from "../../shared/config/dressStyle";
 import { Link } from "react-router-dom";
 
