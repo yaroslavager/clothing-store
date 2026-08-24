@@ -1,9 +1,9 @@
 import "./sizeFilter.scss";
 import { sizes } from "../../../../shared/config/sizes";
-
+import {type Sizes } from "../../../../shared/config/sizes";
 interface SizeProp {
-  chosenSize: string | null;
-  setSize: (size: string | null) => void;
+  chosenSize: Sizes | null ;
+  setSize: (size: Sizes | null) => void;
 }
 
 function SizeFilter({ chosenSize, setSize }: SizeProp) {
@@ -14,13 +14,13 @@ function SizeFilter({ chosenSize, setSize }: SizeProp) {
         <label
           key={size}
           className={`size-filter__label ${chosenSize === size ? "size-filter__label--chosen" : ""} `}
-          htmlFor={`"size-filter__${inx}"`}
+          htmlFor={`size-filter__${inx}`}
         >
           <input
             onChange={() => setSize(chosenSize===size? null : size)}
             checked={chosenSize === size}
             className="size-filter__input"
-            id={`"size-filter__${inx}"`}
+            id={`size-filter__${inx}`}
             type="checkbox"
           />
           <span

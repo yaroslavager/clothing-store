@@ -1,6 +1,6 @@
 export interface NavLink {
   title: string;
-  link?: string;
+  link?: string ;
   children?: {title: string, link: string}[];
 }
 

@@ -5,11 +5,12 @@ import "./catalogPage.scss";
 import { products } from "../../entities/product/model/products";
 import Filters from "../../widgets/filters/filters";
 import ProductGrid from "../../widgets/productGrid/productGrid";
-
+import {type Sizes } from "../../shared/config/sizes";
 function CatalogPage() {
+
   const [price, setPrice] = useState<number[]>([0, 500]);
   const [colorId, setColor] = useState<number | null>(null);
-  const [chosenSize, setSize] = useState<string | null>(null);
+  const [chosenSize, setSize] = useState<Sizes| null>(null);
 
   const [filtersIsOpen, setFiltersIsOpen] = useState(false);
   const fFiltersIsOpen = () => {
@@ -55,7 +56,7 @@ function CatalogPage() {
     if (sexParam && product.sex !== sexParam) {
       return false;
     }
-    if (colorId !== null && !product.color.includes(colorId)) {
+    if (colorId !== null && !product.color?.includes(colorId)) {
       return false;
     }
     if (chosenSize && !product.size.includes(chosenSize)) {
@@ -105,6 +106,7 @@ console.table(filteredParam)
         />
 
         <ProductGrid
+        path="#"
           products={filteredParam}
           title={getTitle()}
           showCount

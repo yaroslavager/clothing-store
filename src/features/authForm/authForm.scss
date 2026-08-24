@@ -26,6 +26,11 @@
     padding: 2rem;
     border-radius: 2rem;
   }
+  &__form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
  &__span{
     font-family: var(--font-primary);
     font-weight: 700;
