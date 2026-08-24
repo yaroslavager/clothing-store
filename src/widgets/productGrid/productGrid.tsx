@@ -42,7 +42,7 @@ function ProductGrid({
       >
         <h2 className="product-grid__title">{title}</h2>
         <p className="product-grid__product-title">
-          {showCount && `Showing 1-10 of ${products.length} Products`}
+          {showCount && `Showing ${products.length} Products`}
         </p>
 
 

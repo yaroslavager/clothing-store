@@ -41,3 +41,10 @@ line-height: 100%;
 margin:  0;
 letter-spacing: -9%;
 }
+button, 
+input[type="submit"], 
+input[type="button"] {
+  -webkit-appearance: none; 
+  appearance: none;
+  color: inherit; 
+}
