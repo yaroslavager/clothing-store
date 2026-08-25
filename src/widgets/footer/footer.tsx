@@ -86,7 +86,7 @@ function Footer() {
         <div className="footer__info-wrapper ">
           {/* что-то из информациии */}
           <div className="footer__left">
-            <img className="footer__logo" src="./logo.svg" alt="logo" />
+            <img className="footer__logo" src="/logo.svg" alt="logo" />
             <p className="footer__p">
               We have clothes that suits your style and which you’re proud to
               wear. From women to men.
