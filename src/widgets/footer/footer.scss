@@ -71,6 +71,7 @@ cursor: pointer;
     cursor: pointer;
     font-size: var(--fs-base);
     background-color: var( --color-bg-secondary);
+    color: var(--color-text-primary);
   }
   &__info-wrapper {
     display: flex;
