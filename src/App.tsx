@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 import "./app/variables.scss";
+import { ScrollToTop } from "./app/providers/scrollToTop";
 
 import HomePage from "./pages/homePage/homePage";
 import CatalogPage from "./pages/catalogPage/catalogPage";
@@ -16,8 +16,10 @@ import Footer from "./widgets/footer/footer";
 // import viteLogo from '/vite.svg'
 
 function App() {
+
   return (
     <BrowserRouter>
+    <ScrollToTop/>
       <AnnouncementBar />
       <Header />
       <Routes>
