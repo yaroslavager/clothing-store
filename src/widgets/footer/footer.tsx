@@ -1,11 +1,13 @@
 import "./footer.scss";
 import FooterList from "../../shared/ui/footerList/footerList";
 import { useState, type FormEvent } from "react";
+import { validateEmail } from "../../shared/lib/validation/validateEmail";
 
 function Footer() {
   //Email
   const [email, setEmail] = useState("");
   console.log(email);
+  const [emailError, setEmailError]=useState<string | null >(null)
   //Status
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
@@ -13,7 +15,14 @@ function Footer() {
   const [showToast, setShowToast] = useState(false);
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setStatus("loading");
+   
+    const error=validateEmail(email)
+    if(error){
+setEmailError(error)
+return
+    }
+setEmailError(null)
+ setStatus("loading");
     try {
       const res = await fetch(`https://jsonplaceholder.typicode.com/posts`, {
         method: "POST",
@@ -72,7 +81,7 @@ function Footer() {
             <p className="footer__toast-message">
               {status === "success"
                 ? "Thank you for subscription"
-                : "Somethimg went wrong"}
+                : `${emailError}`}
             </p>
             <button
               onClick={() => setShowToast(false)}
