@@ -1,5 +1,7 @@
 import "./authForm.scss";
 import { useState, type FormEvent } from "react";
+import { validateEmail } from "../../shared/lib/validation/validateEmail";
+
 
 function AuthForm() {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -7,10 +9,19 @@ function AuthForm() {
     setModalOpen((prev) => !prev);
   };
   const [email, setEmail] = useState("");
+const [emailError, setEmailError]=useState<string | null>(null)
+
 
   const registration = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (email.trim() === "") return;
+   
+    const error = validateEmail(email)
+if(error){
+  setEmailError(error)
+  return
+}
+setEmailError(null)
+
     try {
       const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
         method: "POST",
@@ -76,11 +87,12 @@ function AuthForm() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   id="auth-form__input"
-                  className="auth-form__input"
+                  className={`auth-form__input ${emailError ? "auth-form__input--error" : ""} `}
                   type="email"
-                  placeholder="Email"
+                  placeholder={"Email"}
                   required
                 />
+                {emailError ? <span className="auth-form__error-message">{emailError}</span>  : null}
                 <button type="submit" className="auth-form__button">
                   Continue
                 </button>

@@ -71,6 +71,13 @@
     outline: none;
     border: 1px solid var(--color-text-thirdly);
   }
+  &__input--error{
+    border: 1px solid red;
+  }
+  &__error-message{
+    color: var(--color-text-thirdly);
+    align-self: center;
+  }
   &__footer-text {
     font-size: var(--fs-xxxs);
     margin: 0 auto;
