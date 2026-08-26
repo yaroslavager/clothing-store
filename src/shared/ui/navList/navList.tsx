@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
+
 import { useLocation } from "react-router-dom";
 import { navLinks } from "../../config/navLinks";
 import { Link } from "react-router-dom";
@@ -19,10 +19,10 @@ function NavList({ Class }: NavListProps) {
   }, [location]);
   return (
     <ul className={`${Class}__list`}>
-      {navLinks?.map((link, index) =>
+      {navLinks?.map((link) =>
         link.children ? (
-          <>
-            <li className={`${Class}__item`} key={index} onClick={toggle}>
+          <Fragment key={link.title}>
+            <li className={`${Class}__item`} onClick={toggle}>
               <span className="navigation__item">
                 {link.title}
                 <svg
@@ -43,9 +43,9 @@ function NavList({ Class }: NavListProps) {
             {isOpen && (
               <div className={`${Class}__subMenu`}>
                 <ul className={`${Class}__subList`}>
-                  {link.children.map((people, inx) => {
+                  {link.children.map((people) => {
                     return (
-                      <li className={`${Class}__subItem`} key={inx}>
+                      <li className={`${Class}__subItem`} key={people.title}>
                         <Link to={people.link}>{people.title}</Link>
                       </li>
                     );
@@ -53,9 +53,9 @@ function NavList({ Class }: NavListProps) {
                 </ul>
               </div>
             )}
-          </>
+          </Fragment>
         ) : (
-          <li className={`${Class}__item`} key={index}>
+          <li className={`${Class}__item`} key={link.title}>
             <Link to={link.link ?? "#"}> {link.title} </Link>
           </li>
         ),
