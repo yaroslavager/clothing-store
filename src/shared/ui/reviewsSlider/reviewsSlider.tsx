@@ -7,7 +7,6 @@ function ReviewsSlider() {
     <div className="reviews-slider">
       <div className="reviews-slider__slider container">
         <h2 className="reviews-slider__title">OUR HAPPY CUSTOMERS</h2>{" "}
-        <img src="#" alt="" />
         {/* <div className="reviews-slider__slider-wrapper">
           <button className="reviews-slider__buttons">
             <svg
