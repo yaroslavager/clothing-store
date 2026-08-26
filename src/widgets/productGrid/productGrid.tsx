@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./productGrid.scss";
 import { type Product } from "../../entities/product/model/products";
 
-import ProductPrice from "../../shared/ui/productPrice/productPrice";
+import ProductPrice from "../../entities/product/ui/productPrice/productPrice";
 
 interface ProductGridProps {
   products: Product[] | [],

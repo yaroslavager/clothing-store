@@ -7,7 +7,7 @@ import "./productPage.scss";
 
 import { products } from "../../entities/product/model/products";
 import { colors } from "../../shared/config/colors";
-import ProductPrice from "../../shared/ui/productPrice/productPrice";
+import ProductPrice from "../../entities/product/ui/productPrice/productPrice";
 
 function ProductPage() {
   const addItem = useCartStore((state) => state.addItem);
