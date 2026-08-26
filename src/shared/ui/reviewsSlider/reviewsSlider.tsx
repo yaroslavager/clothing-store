@@ -42,7 +42,7 @@ function ReviewsSlider() {
 
       <div className="reviews-slider__wrapper">
         {reviews.map((review) => (
-          <ReviewsCard review={review} />
+          <ReviewsCard key={review.id} review={review} />
         ))}
       </div>
     </div>
