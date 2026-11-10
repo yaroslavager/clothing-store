@@ -14,6 +14,7 @@ Clothing Store is a clothing e-commerce project built with React. This is my fir
 - **Build tool:** Vite
 - **Language:** JavaScript, TypeScript
 - **Styles:** CSS/SCSS
+- **State Management:** Zustand 
 
 ### What I built:
 
@@ -52,6 +53,7 @@ Clothing Store — проект интернет-магазина одежды �
 - **Build tool:** Vite
 - **Language:** JavaScript, TypeScript
 - **Styles:** CSS/SCSS
+- **State Management:** Zustand 
 
 ### Реализовано:
 
