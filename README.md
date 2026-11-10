@@ -2,34 +2,76 @@
 
 ### Eng/Ru
 
-Hi! This is my very first pet project built with **React**.
-
 ### About the Project
 
-I am building my first e-commerce clothing store to practically understand how modern web development works.
+Clothing Store is a clothing e-commerce project built with React. This is my first React project, and I’m using it to practise TypeScript and learn how to structure a frontend application.
 
-- **Status:** Work in Progress (Level: Pre-Junior 🐣)
-- **Goal:** To learn React, TypeScript typing, project architecture, and build my portfolio.
+- **Status:** Work in Progress
 
 ### Tech Stack:
 
-- **Framework:** React (via Vite)
+- **UI library:** React
+- **Build tool:** Vite
 - **Language:** JavaScript, TypeScript
 - **Styles:** CSS/SCSS
+
+### What I built:
+
+- Four pages with React Router: home, catalog, product details, and cart.
+
+- Product search by name. The query is stored in the URL so the results can be reopened from a link.
+
+- Catalog filters for category, clothing style, price and size.
+
+- A shopping cart where users can add items in a selected size, change quantities, and remove items. Zustand stores the cart state and keeps it after a page reload.
+
+### Run Locally
+
+Make sure Node.js 22.12 or newer is installed, then run:
+
+```bash
+git clone https://github.com/yaroslavager/clothing-store.git
+cd clothing-store
+npm ci
+npm run dev
+```
+
+Open the local URL shown in the terminal.
 
 ---
 
-Привет, Это мой самый первый пет-проект на **React**.
-
 ### О проекте
 
-Я создаю своей первый интернет-магазин одежды, на практике разобираюсь, как работает современный e-commerce.
+Clothing Store — проект интернет-магазина одежды на React. Это мой первый проект на React. На нём я практикую TypeScript и учусь организовывать код фронтенд-приложения.
 
-- **Статус:** В процессе (уровень: пред-джун 🐣)
-- **Цель:** Изучить React, типизацию в TypeScript, архитектуру, создать портфолио.
+- **Статус:** В разработке
 
-### Что я использую:
+### Технологии:
 
-- **Framework:** React (через Vite)
+- **UI library:** React
+- **Build tool:** Vite
 - **Language:** JavaScript, TypeScript
 - **Styles:** CSS/SCSS
+
+### Реализовано:
+
+- Четыре страницы с навигацией через React Router: главная, каталог, страница товара и корзина.
+
+- Поиск товаров по названию. Запрос сохраняется в URL, поэтому результаты можно повторно открыть по ссылке.
+
+- Фильтрацию каталога по категории, стилю одежды, цене и размеру.
+
+- Корзину, в которую можно добавить товар выбранного размера, изменить количество или удалить позицию. Состояние корзины хранится в Zustand и сохраняется после перезагрузки страницы.
+
+### Как запустить локально
+
+Установи Node.js версии 22.12 или новее, затем выполни команды:
+
+```bash
+git clone https://github.com/yaroslavager/clothing-store.git
+cd clothing-store
+npm ci
+npm run dev
+```
+
+Открой в браузере локальный адрес, который появится в терминале.
